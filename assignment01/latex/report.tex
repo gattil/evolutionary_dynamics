@@ -110,15 +110,129 @@ One finds that if $ f'(x_1) $ with $x_1 = 0$, then $x^{\ast}$ is always stable, 
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \section{Problem 3: Hardy-Weinberg equilibrium}
+Assuming HWE fot three alleles (allele and genotype frequences):
+
+\[  (A+B+0)^2 = A^2 + B^2 + 0^2 + 2AB + 2A0 + 2B0 = 1  \]
+
+We could solve the equation: 
+
+\[  (A+B+0)^2 = (p+q+r)^2 = p^2 + q^2 + r^2 + 2pq + 2pr + 2qr = 1  \]
+
+And given observable genotype frequences
+\begin{align}
+0^2 &= \frac{900}{10000} = 0.09 = r^2 \rightarrow r = 0.3 \\
+2AB &= \frac{2000}{10000} = 0.20 = 2pq \rightarrow pq = 0.1 \\
+A^2 + 2A0 &= \frac{1600}{10000} = 0.16 = p^2 + 2pr\\
+\\
+p^2+2*0.3*p &= 0.16 \\
+p_1 &= \frac{1}{5} \\
+p_2 &= -\frac{4}{5} \text{~not acceptable}\\
+\\
+q = \frac{0.1}{0.2} = 0.5
+\end{align}
+
+So, the frequency for $B$ allele is equal to $0.5$
+
+\subsection{HW Equilibrium}
+
+\begin{align}
+A^2 &= \frac{1500}{10000} = 0.39 = p^2 \rightarrow p = 0.62 
+\end{align}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline genotype & expected & observed \\ 
+\hline PP & 10000*0.39 = 3900 & 1500 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Hence, assuming population carrying $AA$ is $1500$, we are not at the equilibrium of HW $(p^{2}_1 = 0.39 \neq p^{2}_2 = 0.20)$
 
 \setcounter{chapter}{4}
 \setcounter{section}{0}
 \section{Problem 4: Sequence alphabets}
 
+\subsection{A: Amino acid sequences}
+
+According to the number of amino acids $n$ we consider there are:
+
+\begin{align}
+\text{for } c = 20 \text{ then } &s_{space} = c^L, 20^{50} = 1.13*10^{65}\\
+\text{for } c = 22 \text{ then } &s_{space} = c^L, 22^{50} = 1.32*10^{67}
+\end{align}
+
+\subsection{B: Amino acids sequences and DNA sequences}
+
+Each amino acid is codified by $3~nt$, so for a sequence of $50$ amino acids we need $150~nt$ or $153~nt$ if we consider the codon stop at the end of the codifying sequence.
+
+\begin{align}
+\text{for } L = 150 \text{ then } &d_{space} = c^L =  4^{150} = 2.04*10^{90}\\
+\text{for } L = 153 \text{ then } &d_{space} = c^L =  4^{153} = 1.30*10^{92}
+\end{align}
+
 \setcounter{chapter}{5}
 \setcounter{section}{0}
 \section{Problem 5: Random sequences}
 
+\subsection{a: Average and Expected distance}
+
+If the Hamming distance is the number of coordinates where two vectors $x = (x_1,\dots,x_n) $ and $y = (y_1, \dots, y_n)$ of length $N$ differ
+
+\[  d_H(x,y) = \sum\limits_{i=1}^{n} | x_i -y_i |\]
+
+For a set $A \subseteq  F^{n}_{2}, |A|$ denotes the cardinality of $A$. The average distance in A is defined by 
+
+\begin{equation}
+dist(A) = \frac{1}{|A|^2}\sum\limits_{x\in A}\sum\limits_{y\in A} d_H(x,y)
+\end{equation}
+
+Hence 
+
+\begin{equation}
+dist(F^{n}_{2}) = \frac{1}{2^{2n}}\sum\limits_{x\in F^{n}_{2}}\sum\limits_{y\in F^{n}_{2}} d_H(x,y) = \frac{n2^{n-1}2^n}{2^{2n}} = \frac{n}{2}
+\end{equation}
+
+Let $V$ be some finite set with $q$ elements where $n \geq 1$ and $V^n$ is the dimension of sequence space.  $P$ is the common probability distribution. Then, we have
+
+\[  \frac{n(q-1)}{q} - L(P) \leq Ed_H(X,Y) \leq \frac{n(q-1)}{q} \]
+
+where $L(P)$ measures how skewly $P$ is distributed as
+
+\[  L(P) = q^{n-1} \sum\limits_{x \in V^n} \left[P(x)-\frac{1}{q^n}\right]^2 \]
+
+If $ 2\leq q \geq 4$, (in DNA $q=4$) then 
+
+\[  Dd_H(X,Y) \leq )\frac{n(q-1)}{q^2} + \frac{2}{q}L(P) \]
+
+Hence
+
+\[  \frac{n(q-1)}{q^2}  \leq Ed_H(X,Y) \leq \frac{n(q-1)}{q^2} + \frac{2}{q}L(P) \]
+
+This gives out that for two i.i.d. random sequences with the common probability distribution $P$, we have for  $n = L$ and $q = 4$
+\begin{equation}
+Ed_H(X,Y)  = \frac{n(q-1)}{q} = \frac{L(4-1)}{4} = \frac{3}{4}L
+\end{equation}
+
+
+\subsection{b: Number of sequences at a certain distance}
+
+For a binary sequence, it is a composition of $n$ elements in $L$ places at distance $1$
+
+\[  \frac{L!}{(L-1)!} \]
+
+It is a composition of $n$ elements in $L$ places for $K$ differences:
+
+\[  \frac{L!}{(L-K)!} \]
+
+For DNA sequences:
+
+
+could be a permutation with repetitions?
+
+\subsection{c: Replication of sequences}
+\begin{equation}
+q_{ij} = p^{H_{ij}}(1-p)^{L-H_{ij}}
+\end{equation}
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Problem 6: Quasispecies}

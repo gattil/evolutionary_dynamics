@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  27 SEP 2012 19:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  29 SEP 2012 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1471,7 +1471,7 @@ Package pdfcprot Info: I didn't find cmssmslOT1.cpa.
 Package pdfcprot Info: File pplmnOT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
 (pdfcprot)             you intended to use. on input line 49.
-<ETHlogo.pdf, id=36, 179.67125pt x 45.16875pt>
+<ETHlogo.pdf, id=60, 179.67125pt x 45.16875pt>
 File: ETHlogo.pdf Graphic file (type pdf)
  <use ETHlogo.pdf>
 Package pdftex.def Info: ETHlogo.pdf used on input line 55.
@@ -1554,7 +1554,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 35.
 
-<./images/plot_A01_P01.pdf, id=39, 471.7625pt x 375.4025pt>
+<./images/plot_A01_P01.pdf, id=63, 471.7625pt x 375.4025pt>
 File: ./images/plot_A01_P01.pdf Graphic file (type pdf)
 
 <use ./images/plot_A01_P01.pdf>
@@ -1567,7 +1567,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
-go.pdf>] [2 <./images/plot_A01_P01.pdf>]) [3]
+go.pdf>] [2 <./images/plot_A01_P01.pdf>] [3] [4] [5]) [6]
 \tf@thm=\write5
 \openout5 = `document.thm'.
 
@@ -1577,15 +1577,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 89274C78506C4B49FBDC88F82AB11A1B;607.
+(rerunfilecheck)             Checksum: B35CBE7752121D6BD3860B5DFE06D297;1112.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 15745 strings out of 493633
- 229799 string characters out of 3143378
- 411583 words of memory out of 3000000
- 18690 multiletter control sequences out of 15000+200000
- 42435 words of font info for 131 fonts, out of 3000000 for 9000
+ 15794 strings out of 493633
+ 230392 string characters out of 3143378
+ 415583 words of memory out of 3000000
+ 18706 multiletter control sequences out of 15000+200000
+ 44936 words of font info for 137 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  47i,12n,42p,914b,365s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1597,12 +1597,13 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive
 /2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2
 011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/tex
-mf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (3 pages, 1070218 bytes).
+011/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-di
+st/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (6 pages, 1088850 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 12367 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 12415 words of extra memory for PDF output out of 14400 (max. 10000000)
 

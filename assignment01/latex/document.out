@@ -3,6 +3,12 @@
 \BOOKMARK [1][-]{section.2.1}{Problem 2: Logistic growth in continuous time}{}% 3
 \BOOKMARK [2][-]{subsection.2.1.1}{Determining the stability of equilibria}{section.2.1}% 4
 \BOOKMARK [1][-]{section.3.1}{Problem 3: Hardy-Weinberg equilibrium}{}% 5
-\BOOKMARK [1][-]{section.4.1}{Problem 4: Sequence alphabets}{}% 6
-\BOOKMARK [1][-]{section.5.1}{Problem 5: Random sequences}{}% 7
-\BOOKMARK [1][-]{section.6.1}{Problem 6: Quasispecies}{}% 8
+\BOOKMARK [2][-]{subsection.3.1.1}{HW Equilibrium}{section.3.1}% 6
+\BOOKMARK [1][-]{section.4.1}{Problem 4: Sequence alphabets}{}% 7
+\BOOKMARK [2][-]{subsection.4.1.1}{A: Amino acid sequences}{section.4.1}% 8
+\BOOKMARK [2][-]{subsection.4.1.2}{B: Amino acids sequences and DNA sequences}{section.4.1}% 9
+\BOOKMARK [1][-]{section.5.1}{Problem 5: Random sequences}{}% 10
+\BOOKMARK [2][-]{subsection.5.1.1}{a: Average and Expected distance}{section.5.1}% 11
+\BOOKMARK [2][-]{subsection.5.1.2}{b: Number of sequences at a certain distance}{section.5.1}% 12
+\BOOKMARK [2][-]{subsection.5.1.3}{c: Replication of sequences}{section.5.1}% 13
+\BOOKMARK [1][-]{section.6.1}{Problem 6: Quasispecies}{}% 14
