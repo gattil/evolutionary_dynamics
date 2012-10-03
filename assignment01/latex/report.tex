@@ -98,6 +98,20 @@ Finally the solution
 x(t) = x_0Ke^{rt}\frac{1}{K + x_0(e^{rt}-1)}
 \end{equation}
 
+To prove it we explict the computation behind our results$ (\lambda = r)$:
+
+\[\frac{dx}{dt} = \lambda x (1-\frac{x}{k}) = \lambda x (\frac{k-x}{k}) \rightarrow \int \frac{k}{x(k-x)}dx = \int \lambda dt \]
+\[ \int [ \frac{1}{x} + \frac{1}{k-x}]dx = \int \lambda dt \rightarrow \ln |x| - \ln |k-x| = \lambda t + c \rightarrow \]
+\[ \rightarrow \ln |k-x| - \ln |x| = -\lambda t - x \rightarrow \ln | \frac{k-x}{x} | = e^{-\lambda t -c} = \frac{k-x}{x} = \pm e^{-\lambda t}e^{-c} \text{ with } A = e^{-c} \]
+\[ \rightarrow \frac{k-x}{x} = Ae^{-\lambda t} = \frac{k}{x} -1 = Ae^{-\lambda t} \rightarrow x = \frac{k}{1+Ae^{-\lambda t}} = \frac{k}{1+Ae^{-\lambda t}}(\frac{e^{\lambda t}}{e^{\lambda t}}) = \frac{ke^{\lambda t}}{e^{\lambda t}+A} \]
+
+\[ x_0 = x(0) = \frac{k}{1+A} = x_0 \rightarrow k = x_0 + Ax_0 = k-x_0 = Ax_0 \rightarrow A = \frac{k-x_0}{x_0} \]
+
+\[ x = \frac{ke^{\lambda t}}{e^{\lambda t} + \frac{k-x_0}{x_0}} = \frac{kx_0e^{\lambda t}}{e^{\lambda t}x_0+k-x_0} = \frac{kx_0e^{\lambda t}}{k+x_0(e^{\lambda t} -1)} \]
+
+
+
+
 \subsection{b: Determining the stability of equilibrium points}
 
 To determine the stability of the two equilibria points found solving the equation \ref{eq:p02_main} in $0$
@@ -148,17 +162,17 @@ q = \frac{0.1}{0.2} = 0.5
 So, the frequency for $B$ allele is equal to $0.5$
 
 \subsection{b: HW Equilibrium}
-
+The equilibrium is given by $p^* = P^2+pq+pr$
 \begin{align}
-A^2 &= \frac{1500}{10000} = 0.15 = p^2 \rightarrow p = 0.39 
+A^2 &= \frac{1500}{10000} = 0.15 = p^2 \rightarrow p = 0.39 \\
+p^2+2pr &= \frac{1600}{10000} = 0.16 \rightarrow 0.15+2pr = 0.16 \rightarrow pr = \frac{0.01}{2} = 0.005\\
+2pq &= \frac{2000}{10000} = 0.2 \rightarrow pq = 0.1\\
 \end{align}
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline genotype & expected & observed \\ 
-\hline PP & 10000*0.04 = 400 & 1500 \\ 
-\hline 
-\end{tabular} 
-\end{center}
+
+\[ p^* = 0.15+0.0005 + 0.1 = 0.255 \]
+
+So, for the next round of random mating, the number of genotype $AA = (P^*)^2 * 10000 = (0.255)^2*10000 = 650 \neq 1500$.
+The first generation is not in Hardy-Weinberg equilibrium.
 
 Hence, assuming population carrying $AA$ is $1500$, we are not at the equilibrium of HW $(p^{2}_b = 0.15 \neq p^{2}_a = 0.04)$
 
@@ -189,7 +203,7 @@ Each amino acid is codified by $3~nt$, so for a sequence of $50$ amino acids we 
 
 Comparison between the number of unique amino acid sequence and DNA unique sequences:
 
-\[ \frac{4^[150]}{20^[50]} = 1.8 *10^[25] = (\frac{64}{20})^50 \text{ more DNA sequences} \]
+\[ \frac{4^{150}}{20^{50}} = 1.8 *10^{25} = (\frac{64}{20})^{50} \text{ more DNA sequences} \]
 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
@@ -258,111 +272,153 @@ For DNA sequences $(A = 4) $ of length $L$ at distance $K = 1 $:
 Considering $H_{ij}$ as $d$ and $q_ij$ as $q$ : 
 
 \[ q_{ij} = p^d(1-p)^{L-d} \]
-\[ ln q = ln (p^d(1-p)^{L-d}) = ln p^d + ln (1-p)^{L-d} \]
-\[ d ln p + (l-d) ln (1-p) = d ln p - l ln(1-p) - d ln (1-p)  \]
-\[ d(ln p - ln (1-p))  = ln q - l ln (1-p) \]
-\[ d = \frac{ln q - l ln (1-p)}{ln p -ln (1-p)}\]
+\[ \ln q = \ln (p^d(1-p)^{L-d}) = \ln p^d + \ln (1-p)^{L-d} \]
+\[ d \ln p + (l-d) \ln (1-p) = d \ln p - l \ln(1-p) - d \ln (1-p)  \]
+\[ d(\ln p - \ln (1-p))  = \ln q - l \ln (1-p) \]
+\[ d = \frac{\ln q - l \ln (1-p)}{\ln p -\ln (1-p)}\]
 
 
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Problem 6: Quasispecies}
-
+\subsection{a: Find mutation-selection matrix w}
 \[ \frac{dx}{dt} = wx - \varPhi x \] 
-\[ w = (w_{ij}) = (f_{j}q_{ji}) = \begin{bmatrix}
-       0 & q_{10}\\[0.3em]
-       f_0q_{01} & 0 \\[0.3em]
-     \end{bmatrix} \] 
-     
-In the limiting case of completely error-free replication, $Q$ becomes the identity matrix: all diagonal entries are one, all off-diagonal entries are zero. In our case the replication is error free with probability $q$.
 
+If $Q$ is error free then $Q=I$ but here Q is not only error free but also the genotypes are replicated with probability q. So, 
 
-\[ \text{with } f_1 = 1 \text{ and } f_0 > 1 \rightarrow w = \begin{bmatrix}
-       0 & q\\[0.3em]
-       fq & 0 \\[0.3em]
-     \end{bmatrix} \] 
+\[ Q = (q_{ij}) = (f_{j}q_{ji}) = \begin{bmatrix}
+       q & 1-q\\[0.3em]
+       1-q & q \\[0.3em]
+     \end{bmatrix} \]
+
+\[ \text{with } f_1 = 1 \text{ and } f_0 > 1 \rightarrow W = (w_{ij}) = (f_jq_{ji}) = \begin{bmatrix}
+       w_{00} & w_{01}\\[0.3em]
+       w_{10} & w_{11} \\[0.3em]
+     \end{bmatrix} = \begin{bmatrix}
+            f_0q_{00} & f_1q_{01}\\[0.3em]
+            f_0q_{10} & f_1q_{11} \\[0.3em]
+          \end{bmatrix} = \begin{bmatrix}
+                      f_0q & 1-q\\[0.3em]
+                      f_0(1-q) & q \\[0.3em]
+                    \end{bmatrix} \] 
  
 $\varPhi$ is the largest eigen value of $w$, while $x$ is the eigen vector of $w$.
 
 To find eigen values and eigen vector: $ |w - \lambda I | = 0 $ 
 
 \[ \begin{bmatrix}
-       -\lambda & q\\[0.3em]
-       fq & -\lambda \\[0.3em]
-     \end{bmatrix} = 0 \rightarrow \lambda^2 - fq^2 = 0 \rightarrow \left\{ \begin{array}{l}
-         \lambda_1 = +q\sqrt{f}\\
-         \lambda_2 = -q\sqrt{f}\\
+       f_0q-\lambda & 1-q\\[0.3em]
+       f_0-f_0q & q-\lambda \\[0.3em]
+     \end{bmatrix} = 0 \rightarrow (f_0q - \lambda)(q-\lambda)-(f_0-f_0q)(1-q)  \rightarrow \]
+     
+\[ f_0q^2 - f_0q\lambda -\lambda q+\lambda^2 - f_0 + f_0q + f_0q - f_0q^2 = 0 \]
+\[ \lambda^2 - (f_0q+q)\lambda + (2f_0q-f_0) = 0 \]
+\[ \left\{ \begin{array}{l}
+         \lambda_1 = \frac{(f_0q+q) + \sqrt{(f_0q+q)^2 - 4(2f_0q-f_0)}}{2}\\
+         \lambda_2 = \frac{(f_0q+q) - \sqrt{(f_0q+q)^2 - 4(2f_0q-f_0)}}{2}\\
        \end{array} \right. \] 
 
-$\varPhi$ is the largest eigen value of $w \rightarrow \varPhi = \lambda_1 = q\sqrt{f}.$
+\subsection{b: Finding nontrivial solutions}
+
+$\varPhi$ is the largest eigen value of, so $\varPhi = \lambda_1$ \textbf{nontrivial solution}.
+
+\subsection{c: Equilibrium point for $f_0 = f_1 = 1$}
+
+if  $f_0 = f_1 = 1$ then
+
+\[\varPhi = \frac{2q + \sqrt{(2q)^2 - q(2q-1)}}{2} = \frac{2q+\sqrt{4q^2 - 4(2q-1)}}{2} = \frac{2q+2\sqrt{q^2-2q+1}}{2} = q + \sqrt{(q-1)^2} = q + (q-1) \]
+
+\[ \left\{ \begin{array}{l}
+         \varPhi_1 = 2q-1\\
+         \varPhi_2 =1\\
+       \end{array} \right. \] 
 
 \[ \begin{pmatrix}
-       x'_0 \\[0.3em]
-       x'_1 \\[0.3em]
-     \end{pmatrix}  = \begin{pmatrix}
-            0 & q \\[0.3em]
-            fq & 0 \\[0.3em]
-          \end{pmatrix}\begin{pmatrix}
-                 x_0 \\[0.3em]
-                 x_1 \\[0.3em]
-               \end{pmatrix} - q\sqrt{f}\begin{pmatrix}
-                      x_0 \\[0.3em]
-                      x_1 \\[0.3em]
-                    \end{pmatrix} \rightarrow \begin{pmatrix}
-                           x'_0 \\[0.3em]
-                           x'_1 \\[0.3em]
-                         \end{pmatrix}  = \begin{pmatrix}
-                                qx_1\\[0.3em]
-                                fqx_0\\[0.3em]
-                              \end{pmatrix} + \begin{pmatrix}
-                                     -q\sqrt{f}x_0 \\[0.3em]
-                                     -q\sqrt{f}x_1 \\[0.3em]
-                                   \end{pmatrix} = 
-                                   \begin{pmatrix}
-                                    qx_1 -q\sqrt{f}x_0 \\[0.3em]
-                                    fqx_0 -q\sqrt{f}x_1 \\[0.3em]
-                                     \end{pmatrix}
-                                   \] 
+         x'_0\\
+         x'_1\\
+       \end{pmatrix}  = 
+       \begin{pmatrix}
+                q & 1-q\\
+                1-q & q\\
+              \end{pmatrix}
+              \begin{pmatrix}
+                             x_0\\
+                              x_1\\
+                            \end{pmatrix} - \varPhi \begin{pmatrix}
+                                            x_0\\
+                                            x_1\\
+                                          \end{pmatrix} \] 
 
-\begin{align}
-x'_0 &= qx_1 - q\sqrt{f}x_0 = f(x_0, x_1 ) \\
-x'_1 &= fqx_0 - q\sqrt{f}x_1 = g(x_0, x_1)
-\end{align}
+if $\varPhi = 1$, then:
 
-To find the equilibrium points $f(x_0, x_1) = g(x_0, x_1) = 0$ 
+\[ \begin{pmatrix}
+         x'_0\\
+         x'_1\\
+       \end{pmatrix} = \begin{pmatrix}
+                qx_0 + (1-q)x_1\\
+                (1-q)x_0+qx_1\\
+              \end{pmatrix} - \begin{pmatrix}
+                       x_0\\
+                       x_1\\
+                     \end{pmatrix} \]
+                     
+                     
+\[  x'_0 = qx_0 + (1-q)x_1 -x_0 = f(x_{0}, x_1)\]
+\[  x'_1 = (1-q)x_0+qx_1-x_1 = g(x_0,x_1)\]
 
-\[\left\{ \begin{array}{l}
-         x^*_0 = \frac{1}{\sqrt{f}}x^*_1\\
-         x^*_0 = \frac{\sqrt{f}}{f}x^*_1 = \frac{1}{\sqrt{f}}x^*_1\\
-       \end{array} \right. \rightarrow x^*_0 = \frac{1}{\sqrt{f}}x^*_1 \]
-       
-To study the  stability of equilibrium point, we can use jacobian matrix:
 
-\[ J = \begin{bmatrix}
-       \frac{\partial f}{\partial x_0} & \frac{\partial f}{\partial x_1} \\[0.8em]
-       \frac{\partial g}{\partial x_0} & \frac{\partial g}{\partial x_1}\\[0.8em]
-     \end{bmatrix} = \begin{bmatrix}
-            -q\sqrt{f} & q \\[0.3em]
-            fq & -q\sqrt{f}\\[0.3em]
-          \end{bmatrix} 
-\]
+To find the equilibrium points $f(x_0,x_1) = g(x_0, x_1) = 0$. So
 
-For stability we need negative eigen value from jacobian matrix:
-
-\[ |J-\lambda I] = 0 \rightarrow \left\{ \begin{array}{l} tr(J) < 0 \\ det(J) > 0 \end{array} \right. \]
-
-\[ tr(J) = -q\sqrt{f} -q\sqrt{f} = -2q\sqrt{f} < 0 \]
-\[ det(J) = (-q\sqrt{f})*(-q\sqrt{f}) -fq^2 = fq^2 -fq^2 = 0 \]
-From the determinant of J matrix we can not conclude any result about stability of steady states.
-
-\subsection{c}
-
-\[ \textbf{If } f_0 = f_1 = 1 \rightarrow x^*_0 = x^*_1 \rightarrow \text{population genotipe 0 and 1 is the same in whole population at steady state.}  \]
+\[ qx^*_0 + x^*_1 -qx^*_1 - x^*_0 = 0 \rightarrow (1-q)x^*_0 = (1-q)x^*_1\]
+\[ 1-q)x^*_0+qx^*_1-x^*_1 = 0 \rightarrow (1-q)x^*_0 = (1-q)x^*_1\]
+\[ \rightarrow x^*_0 = \frac{1-q}{1-q}x^*_1 = x^*_1 \rightarrow x^*_0 = x^*_1\]
+Population type 0 is equal to population type 1 $= \frac{1}{2}$
 
 \subsection{d}
 
-\[ \textbf{If } f_0 \gg 1 \rightarrow x^*_1 = \sqrt{f}x_0 \]
+$f_0 \geq 0$ and $q=1$
+
+\[q=1 \rightarrow \varPhi =  \frac{(f_0+1) + \sqrt{(f_9+1)^2 -4(2f_0-f_0)}}{2} = \frac{(f_0+1)+\sqrt{(f_0+1)^2-4f_0}}{2} = \frac{(f_0+1) + (f_0-1)}{2} \]
+
 \[ \left\{ \begin{array}{l}
-         x_0 \text{ goes extinct}\\
-         x_1 = \infty \rightarrow \text{ whole population is type 1}\\
-       \end{array} \right. \]
+         \varPhi_1 = \frac{f_0+1+f_0 -1}{2} = f_0\\
+         \varPhi_2 =\frac{f_0+1-f_0+1}{2} = 1 \\
+       \end{array} \right. \] 
+       
+Since $\varPhi$ should be the largest and $f_0 \gg 1 $ we choose $\varPhi_1$.
+
+\[ \begin{pmatrix}
+         x'_0\\
+         x'_1\\
+       \end{pmatrix}  = 
+       \begin{pmatrix}
+                q & 1-q\\
+                1-q & q\\
+              \end{pmatrix}
+              \begin{pmatrix}
+                             x_0\\
+                              x_1\\
+                            \end{pmatrix} - f_0 \begin{pmatrix}
+                                            x_0\\
+                                            x_1\\
+                                          \end{pmatrix} =        \begin{pmatrix}
+                                                          q & 1-q\\
+                                                          1-q & q\\
+                                                        \end{pmatrix}
+                                                        \begin{pmatrix}
+                                                                       x_0\\
+                                                                        x_1\\
+                                                                      \end{pmatrix} - \begin{pmatrix}
+                                                                                                   f_0x_0\\
+                                                                                                   f_0x_1\\
+                                                                                                 \end{pmatrix}\] 
+
+\[  x'_0 = qx_0 + (1-q)x_1 -f_0x_0 = f(x_{0}, x_1)\]
+\[  x'_1 = (1-q)x_0+qx_1-f_0x_1 = g(x_0,x_1)\]
+
+To find the equilibrium point $f(x_0, x_1) = g(x_0, x_1)$ = 0
+
+\[ qx^*_0 + x^*_1 -qx^*_1 - f_0x^*_0 = 0 \rightarrow (f_0-q)x^*_0 = (1-q)x^*_1\]
+\[ 1-q)x^*_0+qx^*_1-f_0x^*_1 = 0 \rightarrow (f_0-q)x^*_0 = (f_0-q)x^*_1\]
+\[ \rightarrow x^*_0 = \frac{f_0-q}{1-q}= \frac{f_0-1}{0} \rightarrow x^*_0 = \infty \text{ whole the population is type 1}\]
+\[ \rightarrow x^*_1 = \frac{1-q}{f_0-q}= \frac{1-1}{f_0-1} \rightarrow x^*_1 = 0 \text{ no type 0 in the population}\]
