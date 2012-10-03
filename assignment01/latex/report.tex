@@ -154,12 +154,15 @@ Hence, assuming population carrying $AA$ is $1500$, we are not at the equilibriu
 
 \subsection{A: Amino acid sequences}
 
-According to the number of amino acids $n$ we consider there are:
+According to the number of amino acids $c$, $c_1 = 20 \text{ standard aminoacids} | c_2 = 22 \text{ standard + non-canonical}$ we consider there are:
 
 \begin{align}
-\text{for } c = 20 \text{ then } &s_{space} = c^L, 20^{50} = 1.13*10^{65}\\
-\text{for } c = 22 \text{ then } &s_{space} = c^L, 22^{50} = 1.32*10^{67}
+\text{for } c_1 = 20 \text{ then } &s_{space} = c_1^L, 20^{50} = 1.13*10^{65}\\
+\text{for } c_2 = 22 \text{ then } &s_{space} = c_2^L, 22^{50} = 1.32*10^{67}
 \end{align}
+
+Since each aminoacid is not codified by an unique codon (3 nt), the number of unique DNA sequences is much larger then unique aminoacids sequences.
+
 
 \subsection{B: Amino acids sequences and DNA sequences}
 
@@ -236,3 +239,102 @@ q_{ij} = p^{H_{ij}}(1-p)^{L-H_{ij}}
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Problem 6: Quasispecies}
+
+\[ \frac{dx}{dt} = wx - \varPhi x \] 
+\[ w = (w_{ij}) = (f_{j}q_{ji}) = \begin{bmatrix}
+       0 & q_{10}\\[0.3em]
+       f_0q_{01} & 0 \\[0.3em]
+     \end{bmatrix} \] 
+     
+In the limiting case of completely error-free replication, $Q$ becomes the identity matrix: all diagonal entries are one, all off-diagonal entries are zero. In our case the replication is error free with probability $q$.
+
+
+\[ \text{with } f_1 = 1 \text{ and } f_0 > 1 \rightarrow w = \begin{bmatrix}
+       0 & q\\[0.3em]
+       fq & 0 \\[0.3em]
+     \end{bmatrix} \] 
+ 
+$\varPhi$ is the largest eigen value of $w$, while $x$ is the eigen vector of $w$.
+
+To find eigen values and eigen vector: $ |w - \lambda I | = 0 $ 
+
+\[ \begin{bmatrix}
+       -\lambda & q\\[0.3em]
+       fq & -\lambda \\[0.3em]
+     \end{bmatrix} = 0 \rightarrow \lambda^2 - fq^2 = 0 \rightarrow \left\{ \begin{array}{l}
+         \lambda_1 = +q\sqrt{f}\\
+         \lambda_2 = -q\sqrt{f}\\
+       \end{array} \right. \] 
+
+$\varPhi$ is the largest eigen value of $w \rightarrow \varPhi = \lambda_1 = q\sqrt{f}.$
+
+\[ \begin{pmatrix}
+       x'_0 \\[0.3em]
+       x'_1 \\[0.3em]
+     \end{pmatrix}  = \begin{pmatrix}
+            0 & q \\[0.3em]
+            fq & 0 \\[0.3em]
+          \end{pmatrix}\begin{pmatrix}
+                 x_0 \\[0.3em]
+                 x_1 \\[0.3em]
+               \end{pmatrix} - q\sqrt{f}\begin{pmatrix}
+                      x_0 \\[0.3em]
+                      x_1 \\[0.3em]
+                    \end{pmatrix} \rightarrow \begin{pmatrix}
+                           x'_0 \\[0.3em]
+                           x'_1 \\[0.3em]
+                         \end{pmatrix}  = \begin{pmatrix}
+                                qx_1\\[0.3em]
+                                fqx_0\\[0.3em]
+                              \end{pmatrix} + \begin{pmatrix}
+                                     -q\sqrt{f}x_0 \\[0.3em]
+                                     -q\sqrt{f}x_1 \\[0.3em]
+                                   \end{pmatrix} = 
+                                   \begin{pmatrix}
+                                    qx_1 -q\sqrt{f}x_0 \\[0.3em]
+                                    fqx_0 -q\sqrt{f}x_1 \\[0.3em]
+                                     \end{pmatrix}
+                                   \] 
+
+\begin{align}
+x'_0 &= qx_1 - q\sqrt{f}x_0 = f(x_0, x_1 ) \\
+x'_1 &= fqx_0 - q\sqrt{f}x_1 = g(x_0, x_1)
+\end{align}
+
+To find the equilibrium points $f(x_0, x_1) = g(x_0, x_1) = 0$ 
+
+\[\left\{ \begin{array}{l}
+         x^*_0 = \frac{1}{\sqrt{f}}x^*_1\\
+         x^*_0 = \frac{\sqrt{f}}{f}x^*_1 = \frac{1}{\sqrt{f}}x^*_1\\
+       \end{array} \right. \rightarrow x^*_0 = \frac{1}{\sqrt{f}}x^*_1 \]
+       
+To study the  stability of equilibrium point, we can use jacobian matrix:
+
+\[ J = \begin{bmatrix}
+       \frac{\partial f}{\partial x_0} & \frac{\partial f}{\partial x_1} \\[0.8em]
+       \frac{\partial g}{\partial x_0} & \frac{\partial g}{\partial x_1}\\[0.8em]
+     \end{bmatrix} = \begin{bmatrix}
+            -q\sqrt{f} & q \\[0.3em]
+            fq & -q\sqrt{f}\\[0.3em]
+          \end{bmatrix} 
+\]
+
+For stability we need negative eigen value from jacobian matrix:
+
+\[ |J-\lambda I] = 0 \rightarrow \left\{ \begin{array}{l} tr(J) < 0 \\ det(J) > 0 \end{array} \right. \]
+
+\[ tr(J) = -q\sqrt{f} -q\sqrt{f} = -2q\sqrt{f} < 0 \]
+\[ det(J) = (-q\sqrt{f})*(-q\sqrt{f}) -fq^2 = fq^2 -fq^2 = 0 \]
+From the determinant of J matrix we can not conclude any result about stability of steady states.
+
+\subsection{c}
+
+\[ \textbf{If } f_0 = f_1 = 1 \rightarrow x^*_0 = x^*_1 \rightarrow \text{population genotipe 0 and 1 is the same in whole population at steady state.}  \]
+
+\subsection{d}
+
+\[ \textbf{If } f_0 \gg 1 \rightarrow x^*_1 = \sqrt{f}x_0 \]
+\[ \left\{ \begin{array}{l}
+         x_0 \text{ goes extinct}\\
+         x_1 = \infty \rightarrow \text{ whole population is type 1}\\
+       \end{array} \right. \]
