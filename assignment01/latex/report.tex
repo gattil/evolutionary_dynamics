@@ -3,7 +3,8 @@
 \setcounter{chapter}{1}
 \setcounter{section}{0}
 \section{Problem 1: Logistic difference equation}
-We can find stable points from  
+\subsection{a: Finding the equilibrium points}
+We can find equilibrium points from  
 \begin{equation}
 f(x, a) = ax(1-x) = x
 \label{eq:p01_main}
@@ -14,30 +15,41 @@ ax^2 - (a - 1)x = x(ax - (a - 1)) = 0
 \end{equation}
 which are:
 \begin{align}
-x_1 &= 0 \\
-x_2 &= \frac{(a-1)}{a}
+x^*_1 &= 0 \\
+x^*_2 &= \frac{(a-1)}{a}
 \end{align}
 The fixed point $x_2$ is non-negative if $a \geq 1$.
 One can analyze the local stability of the difference equation \ref{eq:p01_main} by examining the partial derivative of $f$ with respect to $x$ evaluated at each fixed point $x^{\ast}$:
 \begin{equation}
-f' = - ax - a(x - 1)
+f' = - ax - a(x - 1) = a- 2ax
 \label{eq:p01_diffmain}
 \end{equation}
 
-Substituting $x_1$ and $x_2$ into \ref{eq:p01_diffmain} yields:
-\begin{align}
-f'(x_1) &= a \\
-f'(x_2) &= 2 - a
-\end{align}
+For $|f'_{x} | < 1$ the equlibrium point is attractive.
 
-One finds that if $a>1 \rightarrow f'(x_1) > 1 $ with $x_1 = 0$, then $x^{\ast}$ is repelling, while if $1 < a < 3 \rightarrow 1 > f'(x_2) > -1 $ with $x_2 = (a - 1) / a$ is stable (attractor).
+\[x^*_1 = 0 \rightarrow f'_{(x)} = a -2a(0) = a \rightarrow |a| < 1 \text{ then } x^*_1 \text{ is attractive}\]
+\[x^*_2 = \frac{(a-1)}{a} \rightarrow f'_{(x)} = a -2a +2 = -a+2 \rightarrow |2-a| < 1 \text{ for } 1<a<3 \text{ then }x^*_1 \text{ is attractive}\]
 
-\subsection{Point stability at different values of $a$}
+\subsection{b: Point stability at different values of $a$}
 
-When $a = 0.9$ then $x_1 = 0.9, x_2 = 1.1$ \\
-When $a = 2.1$ then $x_1 = 2.1, x_2 = -0.1$
+When \textbf{$a = 0.9$}
+\begin{eqnarray}
+x^*_1 = 0 \rightarrow |a| = |0.9| < 1 \textbf{ attractive}\\
+x^*_2 = \frac{(a-1)}{a}  \rightarrow |2-0.9|  = |1.1| > 1 \textbf{ not attractive}\\
+\end{eqnarray}
+When \textbf{$a = 2.1$}
+\begin{eqnarray}
+x^*_1 = 0 \rightarrow |a| = |2.1| > 1 \textbf{ not attractive}\\
+x^*_2 = \frac{(a-1)}{a}  \rightarrow |2-2.1|  = |0.1| < 1 \textbf{ attractive}\\
+\end{eqnarray}
 
-For $a$ values in excess of $3.57$, the orbits $x(t, x0) = {x0, x1, x2, ... }$ depend crucially on the initial condition $x0$. Slight variations in $x0$ result in dramatically different orbits, an important characteristic of chaos.
+When \textbf{$a = 3..58$} 
+\begin{eqnarray}
+x^*_1 = 0 \rightarrow |a| = |3.58| > 1 \textbf{ not attractive}\\
+x^*_2 = \frac{(a-1)}{a}  \rightarrow |2-3.58|  = |1.58| > 1 \textbf{ not attractive}\\
+\end{eqnarray}
+
+In a conceptual view we can see for $a$ values in excess of $3.57$, the orbits $x(t, x0) = {x0, x1, x2, ... }$ depend crucially on the initial condition $x0$. Slight variations in $x0$ result in dramatically different orbits, an important characteristic of chaos.
 
 \begin{figure}[h]
  \centering
@@ -50,6 +62,7 @@ For $a$ values in excess of $3.57$, the orbits $x(t, x0) = {x0, x1, x2, ... }$ d
 \setcounter{chapter}{2}
 \setcounter{section}{0}
 \section{Problem 2: Logistic growth in continuous time}
+\subsection{a: Finding solution of logistic equation}
 We have to solve the equation
 \begin{equation}
 \frac{dx}{dt} = rx (1-\frac{x}{K})  = r(x - \frac{x^2}{K}) = \frac{rx(K-x)}{K}
@@ -85,22 +98,22 @@ Finally the solution
 x(t) = x_0Ke^{rt}\frac{1}{K + x_0(e^{rt}-1)}
 \end{equation}
 
-\subsection{Determining the stability of equilibria}
+\subsection{b: Determining the stability of equilibrium points}
 
 To determine the stability of the two equilibria points found solving the equation \ref{eq:p02_main} in $0$
 \begin{align}
-x_1 &= 0\\
-x_2 &= K
+x^*_1 &= 0\\
+x^*_2 &= K
 \end{align}
 one has to derive it for $x$:
 \begin{equation}
-f' = - r(\frac{x}{K} - 1) - \frac{rx}{K}\\
+f'(x) = - r(\frac{x}{K} - 1) - \frac{rx}{K}\\
 \label{eq:p02_diffmain}
 \end{equation}
-Substituting $x_1$ and $x_2$ into \ref{eq:p02_diffmain} yields:
+Substituting $x^*_1$ and $x^*_2$ into \ref{eq:p02_diffmain} yields:
 \begin{align}
-f'(x_1) &= -1 \\
-f'(x_2) &= -r
+f'(x^*_1) &= r \text{ if } r < 0 \textbf{ stable equilibrium}\\
+f'(x^*_2) &= -r \text{ if } r > 0 \textbf{ stable equilibrium}
 \end{align}
 
 One finds that if $ f'(x_1) $ with $x_1 = 0$, then $x^{\ast}$ is always stable, while if $ for r < 0 \rightarrow f'(x_2) > 0 $ with $x_2 = -r $ $x^{\ast}$ is repelling.
@@ -110,6 +123,7 @@ One finds that if $ f'(x_1) $ with $x_1 = 0$, then $x^{\ast}$ is always stable, 
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \section{Problem 3: Hardy-Weinberg equilibrium}
+\subsection{a: frequency of allele B in population}
 Assuming HWE fot three alleles (allele and genotype frequences):
 
 \[  (A+B+0)^2 = A^2 + B^2 + 0^2 + 2AB + 2A0 + 2B0 = 1  \]
@@ -133,7 +147,7 @@ q = \frac{0.1}{0.2} = 0.5
 
 So, the frequency for $B$ allele is equal to $0.5$
 
-\subsection{HW Equilibrium}
+\subsection{b: HW Equilibrium}
 
 \begin{align}
 A^2 &= \frac{1500}{10000} = 0.15 = p^2 \rightarrow p = 0.39 
@@ -172,6 +186,10 @@ Each amino acid is codified by $3~nt$, so for a sequence of $50$ amino acids we 
 \text{for } L = 150 \text{ then } &d_{space} = c^L =  4^{150} = 2.04*10^{90}\\
 \text{for } L = 153 \text{ then } &d_{space} = c^L =  4^{153} = 1.30*10^{92}
 \end{align}
+
+Comparison between the number of unique amino acid sequence and DNA unique sequences:
+
+\[ \frac{4^[150]}{20^[50]} = 1.8 *10^[25] = (\frac{64}{20})^50 \text{ more DNA sequences} \]
 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
@@ -214,28 +232,38 @@ Hence
 This gives out that for two i.i.d. random sequences with the common probability distribution $P$, we have for  $n = L$ and $q = 4$
 \begin{equation}
 Ed_H(X,Y)  = \frac{n(q-1)}{q} = \frac{L(4-1)}{4} = \frac{3}{4}L
+\label{eq:expected_value}
 \end{equation}
 
+So, for binary sequences we can compute the average distance with equation \ref{eq:expected_value} as well.
 
 \subsection{b: Number of sequences at a certain distance}
 
-For a binary sequence, it is a composition of $n$ elements in $L$ places at distance $1$
+With given sequences of length $L$ for Hamming distance $K$ and alphabet $A$:
 
-\[  \frac{L!}{(L-1)!} \]
+\[  c(L,K) = (A-1)^K\frac{L!}{(L-K)!K!} \]
 
-It is a composition of $n$ elements in $L$ places for $K$ differences:
+For a binary sequence $(A = 2)$ of length $L$ at distance $K = 1$: 
+\[  c(L,K) = (2-1)^K\frac{L!}{(L-K)!K!} \text{ for } K\leq L  \]
+\[  c(L,K) = (2-1)^1\frac{L!}{(L-1)!1!} = \frac{L!}{(L-1)!}  = L\]
 
-\[  \frac{L!}{(L-K)!} \]
+For DNA sequences $(A = 4) $ of length $L$ at distance $K = 1 $:
 
-For DNA sequences:
-
-
-could be a permutation with repetitions?
+\[  c(L,K) = (4-1)^K\frac{L!}{(L-K)!K!} \]
+\[  c(L,K) = 3^K\frac{L!}{(L-K)!K!} \text{ for } K\leq L \]
+\[  c(L,K) = 3^1\frac{L!}{(L-1)!1!} = 3L \]
 
 \subsection{c: Replication of sequences}
-\begin{equation}
-q_{ij} = p^{H_{ij}}(1-p)^{L-H_{ij}}
-\end{equation}
+
+Considering $H_{ij}$ as $d$ and $q_ij$ as $q$ : 
+
+\[ q_{ij} = p^d(1-p)^{L-d} \]
+\[ ln q = ln (p^d(1-p)^{L-d}) = ln p^d + ln (1-p)^{L-d} \]
+\[ d ln p + (l-d) ln (1-p) = d ln p - l ln(1-p) - d ln (1-p)  \]
+\[ d(ln p - ln (1-p))  = ln q - l ln (1-p) \]
+\[ d = \frac{ln q - l ln (1-p)}{ln p -ln (1-p)}\]
+
+
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Problem 6: Quasispecies}
