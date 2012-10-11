@@ -63,47 +63,12 @@ In a conceptual view we can see for $a$ values in excess of $3.57$, the orbits $
 \setcounter{section}{0}
 \section{Problem 2: Logistic growth in continuous time}
 \subsection{a: Finding solution of logistic equation}
-We have to solve the equation
-\begin{equation}
-\frac{dx}{dt} = rx (1-\frac{x}{K})  = r(x - \frac{x^2}{K}) = \frac{rx(K-x)}{K}
-\label{eq:p02_main}
-\end{equation}
-using the separation of variables
-\begin{equation}
-\frac{K}{x(K-x)}dx = rdt
-\end{equation}
-decomposing the right part with partial fractions
-\begin{equation}
-\frac{K}{x(K-x)}=\frac{A}{x} + \frac{B}{K-x}
-\end{equation}
-We find A and B
-\begin{align}
-A&= \frac{K - Bx}{K-x} \\
-B &= \frac{K-A(K-x)}{x}
-\end{align}
-Supposing $A = 1$, and according to above, $B$ is also equal to $1$, so our partial fraction decomposition is
-\begin{equation}
-\frac{K}{x(K-x)}=\frac{1}{x} + \frac{1}{K-x}
-\end{equation}
-Now we have to take the integral from both parts:
-\begin{align}
-\int{\frac{1}{x}+\frac{1}{K-x}dx} &= \int{rdt}\\
-\int{\frac{1}{x}}+\int{\frac{1}{K-x}dx} &= r\int{dt}\\
-\ln{x} - \ln{K-x} &= rt + x_0\\
-\ln{\frac{x}{K-x}} &= rt + x_0\\
-\frac{x}{K-x} &= x_0e^{rt}
-\end{align}
-Finally the solution 
-\begin{equation}
-x(t) = x_0Ke^{rt}\frac{1}{K + x_0(e^{rt}-1)}
-\end{equation}
 
-To prove it we explict the computation behind our results$ (\lambda = r)$:
-
+To prove it we explict the computation behind our results:
 \[\frac{dx}{dt} = \lambda x (1-\frac{x}{k}) = \lambda x (\frac{k-x}{k}) \rightarrow \int \frac{k}{x(k-x)}dx = \int \lambda dt \]
 \[ \int [ \frac{1}{x} + \frac{1}{k-x}]dx = \int \lambda dt \rightarrow \ln |x| - \ln |k-x| = \lambda t + c \rightarrow \]
-\[ \rightarrow \ln |k-x| - \ln |x| = -\lambda t - x \rightarrow \ln | \frac{k-x}{x} | = e^{-\lambda t -c} = \frac{k-x}{x} = \pm e^{-\lambda t}e^{-c} \text{ with } A = e^{-c} \]
-\[ \rightarrow \frac{k-x}{x} = Ae^{-\lambda t} = \frac{k}{x} -1 = Ae^{-\lambda t} \rightarrow x = \frac{k}{1+Ae^{-\lambda t}} = \frac{k}{1+Ae^{-\lambda t}}(\frac{e^{\lambda t}}{e^{\lambda t}}) = \frac{ke^{\lambda t}}{e^{\lambda t}+A} \]
+\[ \rightarrow \ln |k-x| - \ln |x| = -\lambda t - c \rightarrow \ln | \frac{k-x}{x} | = e^{-\lambda t -c} \rightarrow \frac{k-x}{x} = \pm e^{-\lambda t}e^{-c} \text{ with } A = \pm e^{-c} \]
+\[ \rightarrow \frac{k-x}{x} = Ae^{-\lambda t} \rightarrow \frac{k}{x} -1 = Ae^{-\lambda t} \rightarrow x = \frac{k}{1+Ae^{-\lambda t}} = \frac{k}{1+Ae^{-\lambda t}}(\frac{e^{\lambda t}}{e^{\lambda t}}) = \frac{ke^{\lambda t}}{e^{\lambda t}+A} \]
 
 \[ x_0 = x(0) = \frac{k}{1+A} = x_0 \rightarrow k = x_0 + Ax_0 = k-x_0 = Ax_0 \rightarrow A = \frac{k-x_0}{x_0} \]
 
@@ -164,7 +129,7 @@ So, the frequency for $B$ allele is equal to $0.5$
 \subsection{b: HW Equilibrium}
 The equilibrium is given by $p^* = P^2+pq+pr$
 \begin{align}
-A^2 &= \frac{1500}{10000} = 0.15 = p^2 \rightarrow p = 0.39 \\
+A^2 &= \frac{1500}{10000} = 0.15 = p^2  \\
 p^2+2pr &= \frac{1600}{10000} = 0.16 \rightarrow 0.15+2pr = 0.16 \rightarrow pr = \frac{0.01}{2} = 0.005\\
 2pq &= \frac{2000}{10000} = 0.2 \rightarrow pq = 0.1\\
 \end{align}
@@ -174,7 +139,7 @@ p^2+2pr &= \frac{1600}{10000} = 0.16 \rightarrow 0.15+2pr = 0.16 \rightarrow pr 
 So, for the next round of random mating, the number of genotype $AA = (P^*)^2 * 10000 = (0.255)^2*10000 = 650 \neq 1500$.
 The first generation is not in Hardy-Weinberg equilibrium.
 
-Hence, assuming population carrying $AA$ is $1500$, we are not at the equilibrium of HW $(p^{2}_b = 0.15 \neq p^{2}_a = 0.04)$
+Hence, assuming population carrying $AA$ is $1500$, we are not at the equilibrium of HW $(p^{2}_b = 0.15 \neq p^{2}_a = 0.065)$
 
 \setcounter{chapter}{4}
 \setcounter{section}{0}
@@ -326,7 +291,7 @@ $\varPhi$ is the largest eigen value of, so $\varPhi = \lambda_1$ \textbf{nontri
 
 if  $f_0 = f_1 = 1$ then
 
-\[\varPhi = \frac{2q + \sqrt{(2q)^2 - q(2q-1)}}{2} = \frac{2q+\sqrt{4q^2 - 4(2q-1)}}{2} = \frac{2q+2\sqrt{q^2-2q+1}}{2} = q + \sqrt{(q-1)^2} = q + (q-1) \]
+\[\varPhi = \frac{2q + \sqrt{(2q)^2 - 4(2q-1)}}{2} = \frac{2q+\sqrt{4q^2 - 4(2q-1)}}{2} = \frac{2q+2\sqrt{q^2-2q+1}}{2} = q + \sqrt{(q-1)^2} = q + |q-1| \]
 
 \[ \left\{ \begin{array}{l}
          \varPhi_1 = 2q-1\\
@@ -376,9 +341,9 @@ Population type 0 is equal to population type 1 $= \frac{1}{2}$
 
 \subsection{d}
 
-$f_0 \geq 0$ and $q=1$
+$f_0 \gg 1$ and $q=1$
 
-\[q=1 \rightarrow \varPhi =  \frac{(f_0+1) + \sqrt{(f_9+1)^2 -4(2f_0-f_0)}}{2} = \frac{(f_0+1)+\sqrt{(f_0+1)^2-4f_0}}{2} = \frac{(f_0+1) + (f_0-1)}{2} \]
+\[q=1 \rightarrow \varPhi =  \frac{(f_0+1) + \sqrt{(f_0+1)^2 -4(2f_0-f_0)}}{2} = \frac{(f_0+1)+\sqrt{(f_0+1)^2-4f_0}}{2} = \frac{(f_0+1) + |f_0-1|}{2} \]
 
 \[ \left\{ \begin{array}{l}
          \varPhi_1 = \frac{f_0+1+f_0 -1}{2} = f_0\\
@@ -419,6 +384,6 @@ Since $\varPhi$ should be the largest and $f_0 \gg 1 $ we choose $\varPhi_1$.
 To find the equilibrium point $f(x_0, x_1) = g(x_0, x_1)$ = 0
 
 \[ qx^*_0 + x^*_1 -qx^*_1 - f_0x^*_0 = 0 \rightarrow (f_0-q)x^*_0 = (1-q)x^*_1\]
-\[ 1-q)x^*_0+qx^*_1-f_0x^*_1 = 0 \rightarrow (f_0-q)x^*_0 = (f_0-q)x^*_1\]
+\[ \rightarrow (1-q)x^*_0+qx^*_1-f_0x^*_1 = 0 \rightarrow (f_1-q)x^*_0 = (1-q)x^*_1\]
 \[ \rightarrow x^*_0 = \frac{f_0-q}{1-q}= \frac{f_0-1}{0} \rightarrow x^*_0 = \infty \text{ whole the population is type 1}\]
 \[ \rightarrow x^*_1 = \frac{1-q}{f_0-q}= \frac{1-1}{f_0-1} \rightarrow x^*_1 = 0 \text{ no type 0 in the population}\]

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  4 OCT 2012 01:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  11 OCT 2012 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1563,53 +1563,56 @@ File: ./images/plot_A01_P01.pdf Graphic file (type pdf)
 <use ./images/plot_A01_P01.pdf>
 Package pdftex.def Info: ./images/plot_A01_P01.pdf used on input line 56.
 (pdftex.def)             Requested size: 259.47017pt x 206.472pt.
- [2 <./images/plot_A01_P01.pdf>] [3] [4]
-Overfull \hbox (35.09013pt too wide) in paragraph at lines 185--186
+ [2 <./images/plot_A01_P01.pdf>]
+
+LaTeX Warning: Reference `eq:p02_main' on page 3 undefined on input line 82.
+
+[3]
+Overfull \hbox (35.09013pt too wide) in paragraph at lines 150--151
 \OT1/pplx/m/n/10 According to the num-ber of amino acids $\OML/zplm/m/it/10 c$\
 OT1/pplx/m/n/10 , $\OML/zplm/m/it/10 c[] \OT1/zplm/m/n/10 = \OT1/pplx/m/n/10 20
 []\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 c[] \OT1/zplm/m/n/10 = \OT1/pplx/m/n/10 2
 2[]$
  []
 
-[5] [6]
-Overfull \hbox (15.04985pt too wide) detected at line 303
+[4] [5] [6]
+Overfull \hbox (15.04985pt too wide) detected at line 268
 []\OML/zplm/m/it/10 f[] \OT1/zplm/m/n/10 = \OT1/pplx/m/n/10 1[]\OML/zplm/m/it/1
 0 f[] > \OT1/pplx/m/n/10 1 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 W \OT1/zplm/m/n
 /10 = (\OML/zplm/m/it/10 w[]\OT1/zplm/m/n/10 ) = (\OML/zplm/m/it/10 f[]q[]\OT1/
 zplm/m/n/10 ) = [] = [] = []
  []
 
-[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 325.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 325.
+(hyperref)                removing `math shift' on input line 290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 325.
+(hyperref)                removing `subscript' on input line 290.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 325.
+(hyperref)                removing `subscript' on input line 290.
 
 
-Overfull \hbox (51.9445pt too wide) detected at line 329
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 290.
+
+
+Overfull \hbox (49.76462pt too wide) detected at line 294
 \OML/zplm/m/it/10 ^^H \OT1/zplm/m/n/10 = [] = [] = [] = \OML/zplm/m/it/10 q \OT
-1/zplm/m/n/10 + [] = \OML/zplm/m/it/10 q \OT1/zplm/m/n/10 + (\OML/zplm/m/it/10 
-q \OMS/zplm/m/n/10 ^^@ \OT1/pplx/m/n/10 1\OT1/zplm/m/n/10 )
+1/zplm/m/n/10 + [] = \OML/zplm/m/it/10 q \OT1/zplm/m/n/10 + \OMS/zplm/m/n/10 j\
+OML/zplm/m/it/10 q \OMS/zplm/m/n/10 ^^@ \OT1/pplx/m/n/10 1\OMS/zplm/m/n/10 j
  []
 
-[8]
-Overfull \hbox (24.90056pt too wide) detected at line 381
+[7]
+Overfull \hbox (22.60057pt too wide) detected at line 346
 \OML/zplm/m/it/10 q \OT1/zplm/m/n/10 = \OT1/pplx/m/n/10 1 \OMS/zplm/m/n/10 ! \O
 ML/zplm/m/it/10 ^^H \OT1/zplm/m/n/10 = [] = [] = []
  []
 
-) [9]
+) [8]
 \tf@thm=\write5
 \openout5 = `document.thm'.
 
@@ -1620,16 +1623,20 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 48D8B6B8CC64071D971604E447F16EF4;1721.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 15871 strings out of 493633
- 231349 string characters out of 3143378
- 417583 words of memory out of 3000000
+ 15858 strings out of 493633
+ 231187 string characters out of 3143377
+ 415583 words of memory out of 3000000
  18764 multiletter control sequences out of 15000+200000
  48203 words of font info for 145 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 47i,12n,42p,914b,365s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,12n,42p,914b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1644,10 +1651,10 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (9 pages, 1119818 bytes).
+Output written on document.pdf (8 pages, 1118560 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
  12471 words of extra memory for PDF output out of 14400 (max. 10000000)
 
