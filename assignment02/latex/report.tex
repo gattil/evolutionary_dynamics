@@ -153,7 +153,7 @@ Solutions:
 \begin{align*}
 E[X(t) | X(0)  = i ] &= E[X(0) + \sum\limits_{s=1}^{t} \Delta(t) ] \\
 &= E[i] + E\left[  \sum\limits_{s=1}^{t} \Delta(s) \right] \\
-&= i + E \left[ \sum\limits_{s=1}^{t} \left[1 * \frac{a}{2} + 0 * (1-a) -1*\frac{a}{2}\right] \right]
+&= i + E \left[ \sum\limits_{s=1}^{t} \left[1 * \frac{a}{2} + 0 * (1-a) -1*\frac{a}{2}\right] \right]\\
 E[X(t) | X(0)  = i ] &= i + sE(\Delta(1)) = i + s*0 = i
 \end{align*}
 \subsection{b}
@@ -170,8 +170,20 @@ Var(X(t)|X(0) = i ) &= Var(i) + t* Var(\Delta(1)) = 0 + t*a = at
 \setcounter{section}{0}
 \section{Neutral Moran process}
 
+\subsection{d}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.7]{./images/plot_moran}
+\caption{Neutral Moran processes, with $N=10$ and $N=100$}
+\label{fig:graph03}
+\end{figure}
+
+\lstinputlisting[caption={./script.m},label=lst:ev02_main]{./listing/script.m}
+\lstinputlisting[caption={./moran.m},label=lst:ev02_moran]{./listing/moran.m}
 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
 \section{Absorption in a birth-death process}
+
 
