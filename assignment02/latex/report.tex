@@ -170,10 +170,93 @@ Var(X(t)|X(0) = i ) &= Var(i) + t* Var(\Delta(1)) = 0 + t*a = at
 \setcounter{section}{0}
 \section{Neutral Moran process}
 \subsection{a}
+Transition matrix of Neural Moran  process is (assume $p = i/N$):\\
+\begin{align*}
+P_{0,0} &= 1\\
+P_{i,i-1} &= (\frac{N-1}{i}) (i/N) = (1-p) (p)\\
+P_{i,i+1} &= (i/N) (\frac{N-1}{i}) = (p) (1-p)\\
+P_{i,i} &= 1 - P_{i,i-1} - P_{i,i+1} = 1-(1-p)p-p(1-p) = 2p^2-2p+1 = p^2+(1-p)^2
+\end{align*}
+
+From \textit{law of total expectation:}
+
+\begin{align*}
+ E[X(t)|X(t-1) = i]&= (i-1)P_{i,i-1} +i P_{i,i}+ (i+1) P_{i,i+1}\\
+  &= (i-1)(1-p) (p) + i (p^2+(1-p)^2) + (i+1) (p) (1-p)\\
+&= (i-1+i+1)p(1-p) + i (p^2+(1-p)^2) \\
+ &= 2 i p (1-p) + i (p^2+(1-p)^2)\\
+&= 2ip - 2ip^2 + ip^2+ ip^2 - 2ip + i = i
+\end{align*}
+Then, by doing repeatedly
+\begin{align}
+E_{Y}[Y] = E_{Z}[E_{Y}[Y|Z]] = E[Z] \Rightarrow E[X(t)] = E[X(0)]
+\end{align}
+
+So, $E[X(t)|X(0) = i] = i$
 
 \subsection{b}
 
+\begin{align}
+V_t = Var(X(t)|X(0) = i)
+\end{align}
+
+Therefore,
+\begin{align*}
+V_1 &= Var(X(1)|X(0) = i) = E[X(1)^2|X(0) = i] - E[X(1)|X(0) = i]^2\\ 
+&= (i-1)^2 p (1-p) + i^2 (p^2 + (1 - p)^2) + (i+1)^2 p (1-p) - i^2\\ 
+&= 2 p (1-p) = 2 (i/N)(1-i/N)
+\end{align*}
+$Var(X(t)|X(t-1) = i) = Var(X(1)|X(0) = i)$, since $(X(t)|X(t-1) = i)$ and $(X(1)|X(0) = i)$ are identically distributed.\\
+
+From \textit{law of total variance}:
+
+\begin{align*}
+Var[Y] &= E[Y^2] - E[Y]^2 = E[E[Y^2|X]] - E[E[Y|X]]^2 \\ 
+&= E[Var[Y|X] + E[Y|X]^2] - E[E[Y|X]]^2 \\ 
+&= E[Var[Y|X]] + (E[E[Y|X]^2] - E[E[Y|X]]^2) \\
+&= E[Var[Y|X]] + Var[E[Y|X]]
+\end{align*}
+
+Hence,
+\begin{align*}
+Var[Y] &=  E[Var[Y|Z]] + Var[E[Y|Z]]\\ 
+&= E[(2Z/N)(1-Z/N)] + Var(Z)\\ 
+&= (2E[Z]/N)(1-E[Z]/N) + (1-2 N^2)Var(Z)
+\end{align*}
+
+So, we have $Y = (X(t)|X(0) = i)$ and $Z = (X(t-1)|X(0) = i )$
+
+\begin{align*}
+Var[Y] &= (2E[Z]/N)(1-E[Z]/N) + (1-2 N^2)Var(Z) \Rightarrow  \\
+Var[X(t)|X(0) = i] &= (2E[X(t-1)]/N)(1-E[X(t-1)]/N) + (1-2 N^2)Var(X(t-1)|X(0) = i )\\
+&= (2i/N)(1-i/N) + (1-2 N^2)Var(X(t-1)|X(0) = i ) \Rightarrow \\
+Var[X(t)|X(0) = i]&= V_1 + (1-2 N^2)Var(X(t-1)|X(0) = i ) \Rightarrow  \\
+V_t&= V_{1} + (1-2 N^2)V_{t-1}
+\end{align*}
+
+Finally ($X(0) = i$),
+
+\begin{align*}
+V_{t} - \frac{V_{1}}{2/N^2} &= (1-2/N^2) (V_{t-1} - \frac{V_1}{2/N^2}) = (1-2/N^2)^{t-1} (V_1 - \frac{V_1}{2/N^2}) \Rightarrow \\
+V_{t} &= V_{1}\frac{1-(1-2/N^2)^t}{2/N^2}
+\end{align*}
+
 \subsection{c}
+
+By definition $V_1 = 2P_{i, i-1} = 2P_{i, i+1}$, in terms of problem 3 $V_1 = 2*\frac{q}{2} = q$
+
+\[ \lim\limits_{N\rightarrow\inf} \frac{1 - 1(1-2/N^2)^t}{2/N^2} \]
+
+Using l'Hopital's rule to calculate the limit: 
+
+\[ \lim\limits_{N\rightarrow\inf} \frac{1 - 1(1-2/N^2)^t}{2/N^2} =  \lim\limits_{N\rightarrow\inf} \frac{-(t(1-2/N^2)^{t-1}*4/N^3)}{-4/N^3} = t(1-2/N^2)^{t-1}\]
+
+This gives us:
+
+\[ \boxed{ \lim\limits_{N\rightarrow\inf} \frac{1 - 1(1-2/N^2)^t}{2/N^2} = t } \]
+
+Therefore, for large $N$ , we have that $Var(X(t) | X(0) = 1) = at$, which is our result in problem 3 part b.
+
 
 \subsection{d}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  18 OCT 2012 00:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  18 OCT 2012 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1555,19 +1555,27 @@ File: ./images/graph02.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./images/graph02.pdf used on input line 143.
 (pdftex.def)             Requested size: 265.37749pt x 166.07774pt.
  [4]
-<./images/plot_moran.pdf, id=123, 492.84125pt x 392.46625pt>
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+[5 <./images/graph02.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
+
+ []
+
+[6] <./images/plot_moran.pdf, id=140, 492.84125pt x 392.46625pt>
 File: ./images/plot_moran.pdf Graphic file (type pdf)
 
 <use ./images/plot_moran.pdf>
-Package pdftex.def Info: ./images/plot_moran.pdf used on input line 182.
+Package pdftex.def Info: ./images/plot_moran.pdf used on input line 265.
 (pdftex.def)             Requested size: 344.98651pt x 274.72449pt.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 187.
- (./listing/script.m [5 <./images/graph02.pdf>]
+nput line 270.
+ (./listing/script.m
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <7> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 8.
-)
-[6 <./images/plot_moran.pdf>] (./listing/moran.m) [7] [8]) [9]
+ [7] [8 <./images/plot_moran.pdf>]) (./listing/moran.m) [9] [10]) [11]
 \tf@thm=\write5
 \openout5 = `document.thm'.
 
@@ -1579,16 +1587,17 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 6E1E0D1AAA799115BACED21AE95B2591;1041.
 
+
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 16744 strings out of 493633
- 240672 string characters out of 3143377
- 703568 words of memory out of 3000000
- 19598 multiletter control sequences out of 15000+200000
+ 16758 strings out of 493633
+ 240827 string characters out of 3143377
+ 718568 words of memory out of 3000000
+ 19608 multiletter control sequences out of 15000+200000
  47080 words of font info for 145 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  47i,13n,42p,914b,2395s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1606,10 +1615,10 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive
 mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (9 pages, 1993011 bytes).
+Output written on document.pdf (11 pages, 1999369 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 116 named destinations out of 1000 (max. 500000)
  12457 words of extra memory for PDF output out of 14400 (max. 10000000)
 
