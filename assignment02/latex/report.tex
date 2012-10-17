@@ -149,13 +149,22 @@ Solutions:
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \section{Random walk}
-
+\subsection{a}
 \begin{align*}
-E[X(t) | X(0)  = i ] &= E[X(0) + \sum\limits_{s=1}^{t} \Delta(s) ] \\
+E[X(t) | X(0)  = i ] &= E[X(0) + \sum\limits_{s=1}^{t} \Delta(t) ] \\
 &= E[i] + E\left[  \sum\limits_{s=1}^{t} \Delta(s) \right] \\
 &= i + E \left[ \sum\limits_{s=1}^{t} \left[1 * \frac{a}{2} + 0 * (1-a) -1*\frac{a}{2}\right] \right]
+E[X(t) | X(0)  = i ] &= i + sE(\Delta(1)) = i + s*0 = i
 \end{align*}
-
+\subsection{b}
+\begin{align*}
+Var[X(t) | X(0) = i] = at
+Var(X(t)) &= Var(x(0) + \Delta(1) + \dots + \Delta(t))\\
+&= Var(x(0) + Var(\Delta(1)) + \dots + Var(\Delta(t)))\\
+&=Var(X(0)) + t*Var(\Delta(1)) = \\
+\text{as }Var(\Delta(1)) &= (1-0)^2 *  \frac{a}{2} + (1-0)^2 * \frac{a}{2} + 0^2(1-a) = a\\
+Var(X(t)|X(0) = i ) &= Var(i) + t* Var(\Delta(1)) = 0 + t*a = at
+\end{align*}
 
 \setcounter{chapter}{4}
 \setcounter{section}{0}

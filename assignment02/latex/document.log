@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  17 OCT 2012 20:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  17 OCT 2012 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1471,7 +1471,7 @@ Package pdfcprot Info: I didn't find cmssmslOT1.cpa.
 Package pdfcprot Info: File pplmnOT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
 (pdfcprot)             you intended to use. on input line 47.
-<ETHlogo.pdf, id=44, 179.67125pt x 45.16875pt>
+<ETHlogo.pdf, id=52, 179.67125pt x 45.16875pt>
 File: ETHlogo.pdf Graphic file (type pdf)
  <use ETHlogo.pdf>
 Package pdftex.def Info: ETHlogo.pdf used on input line 53.
@@ -1541,20 +1541,25 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
-go.pdf>] <./images/graph01.pdf, id=62, 402.54391pt x 240.94917pt>
+go.pdf>] <./images/graph01.pdf, id=70, 402.54391pt x 240.94917pt>
 File: ./images/graph01.pdf Graphic file (type pdf)
 
 <use ./images/graph01.pdf>
 Package pdftex.def Info: ./images/graph01.pdf used on input line 55.
 (pdftex.def)             Requested size: 241.5282pt x 144.5706pt.
  [2 <./images/graph01.pdf>] [3]
-<./images/graph02.pdf, id=86, 442.29242pt x 276.79411pt>
+<./images/graph02.pdf, id=94, 442.29242pt x 276.79411pt>
 File: ./images/graph02.pdf Graphic file (type pdf)
 
 <use ./images/graph02.pdf>
 Package pdftex.def Info: ./images/graph02.pdf used on input line 143.
 (pdftex.def)             Requested size: 265.37749pt x 166.07774pt.
- [4]) [5 <./images/graph02.pdf>]
+
+Overfull \hbox (45.44121pt too wide) in paragraph at lines 158--158
+[] 
+ []
+
+[4]) [5 <./images/graph02.pdf>]
 \tf@thm=\write5
 \openout5 = `document.thm'.
 
@@ -1564,7 +1569,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 39B7CE2598C9ED9914973197186726BE;601.
+(rerunfilecheck)             Checksum: 89391B3AA9C12690330CEAF78AB257EB;711.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1573,10 +1578,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 15773 strings out of 493633
- 230171 string characters out of 3143377
- 418583 words of memory out of 3000000
- 18733 multiletter control sequences out of 15000+200000
+ 15778 strings out of 493633
+ 230253 string characters out of 3143377
+ 419583 words of memory out of 3000000
+ 18736 multiletter control sequences out of 15000+200000
  46487 words of font info for 142 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  47i,13n,42p,914b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1593,10 +1598,10 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive
 exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (5 pages, 1950124 bytes).
+Output written on document.pdf (5 pages, 1951073 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 12388 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 12404 words of extra memory for PDF output out of 14400 (max. 10000000)
 
