@@ -3,6 +3,69 @@
 \setcounter{chapter}{1}
 \setcounter{section}{0}
 \section{Simpson and Shannon index}
+\subsection{a}
+Since all draws are independent the probability to observe the same type in $k$ draws is simply a $k-time$ multiplication (Product Rule) of individual probabilities $pi$ (which is in essence a relative frequency of type $i$), so it it is $p^k$
+
+Then we have to sum up such probability for each strain $i$ (additivity axiom, each draw is mutually exclusive)
+
+So, finally
+
+\[ D_k = \sum\limits_{i=1}^{n} p_{i}^{k} \]
+
+We remember from our final ODE model, that after immune response reaches its equilibrium at levels $x_i^* = \frac{cv_i}{b+uv}$ and $z^* = \frac{kv}{b+uv}$ and with this values we could have a single ODE for virus load:
+
+\[ v' = \frac{v}{b+uv} [rb -v(cpD + kq -ru)]   \]
+
+Solution of this ODE (i.e. behavior of $v(t)$) depends on parameters and, in general, has three regimes: immediate disease, chronic infection and disease after long asymptomatic period.
+A certain combination of these parameters called "antigenic diversity threshold" 
+
+\[ D < \frac{ru-kq}{cp} \]
+
+and it puts general equation above out of equilibrium, so causes uncontrolled grows of $v(t)$.
+The only part of this equation which is changing during the course of the disease is $D$ (genetic similarity of virus). It is actually close to $1$ right after the infection and then gradually goes to smaller values (more different virus strains) till reaches its threshold value, when immune system cannot control virus anymore. From mathematical point of view increasing of  $dv/dt$ is smaller with large $D$.
+
+\subsection{b}
+
+For an uniform distribution of $n$ strains:
+\[ H = - \sum\limits_{i=1}^{n} p_i\log(p_i) \text{ if } p_1 = p_2  = \dots = p_n \]
+\[ H = -(p_i\log(p_i)+p_{i+1}\log(p_{i+1}) + \dots+p_n\log(p_n)) =  -np\log(p) = \]
+\[ H = -p_i(\log p_i^n) = -np_i\log p_i \text{ and as } p_i = \frac{1}{n} \text{ for each } i \]
+\[H = -n * \frac{1}{n} * \log\frac{1}{n} = - \log n^{-1} = \log n\]
+
+For $n = 2$ :
+
+\[ H = -p_1\log p_1 - p_2\log p_2 \]
+
+For $p_2 = 1-p_1$ :
+
+\[ H  = -p_1\log p_1 - (1-p_1) \log(1-p_1) \] 
+\[H' = \log (1 - p_1) - \log p_1 \]
+
+To find a maximum/minimum (stable point of $H$): $H' = 0$
+\begin{align*}
+0 &= -\log p_1 + \log (1-p_1)\\
+\log p_1 &= \log (1-p_1)\\
+p_1 &= 1-p_1\\
+p_1 &= \frac{1}{2} \\
+P_2 &= 1 - \frac{1}{2} = \frac{1}{2}
+\end{align*}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.6]{./images/graph01}
+\caption{H' function representation}
+\label{fig:graph01}
+\end{figure}
+
+To describe wheter the point $p_1 = \frac{1}{2}$ is a maximum for $H$, we take the second derivative: $H'' < 0$:
+
+
+\[  H'' = -\frac{1}{p_1\ln 10 } - \frac{1}{(1-p_1)\ln 10} = -\frac{1}{\ln 10} \left(\frac{1}{p_1}+\frac{1}{1-p_1}\right)\]
+
+at $p_1 = \frac{1}{2}$ : $H'' = -\frac{1}{\ln 10} \left(\frac{1}{\frac{1}{2}}+\frac{1}{\frac{1}{2}}\right) = -\frac{1}{\ln 10} * 4 = -4\ln 10 < 0$
+
+Hence, for n= 2, the uniform distribution maximizes the Shannon index.
+
 
 \setcounter{chapter}{2}
 \setcounter{section}{0}
@@ -11,6 +74,12 @@
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \section{Random walk}
+
+\begin{align*}
+E[X(t) | X(0)  = i ] &= E[X(0) + \sum\limits_{s=1}^{t} \Delta(s) ] \\
+&= E[i] + E\left[  \sum\limits_{s=1}^{t} \Delta(s) \right] \\
+&= i + E \left[ \sum\limits_{s=1}^{t} \left[1 * \frac{a}{2} + 0 * (1-a) -1*\frac{a}{2}\right] \right]
+\end{align*}
 
 
 \setcounter{chapter}{4}
