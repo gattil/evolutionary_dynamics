@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  17 OCT 2012 23:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  18 OCT 2012 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,11 +1585,11 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 16740 strings out of 493633
- 240633 string characters out of 3143377
+ 16744 strings out of 493633
+ 240672 string characters out of 3143377
  703568 words of memory out of 3000000
- 19595 multiletter control sequences out of 15000+200000
- 46823 words of font info for 144 fonts, out of 3000000 for 9000
+ 19598 multiletter control sequences out of 15000+200000
+ 47080 words of font info for 145 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  47i,13n,42p,914b,2395s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1606,7 +1606,7 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive
 mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (9 pages, 1991572 bytes).
+Output written on document.pdf (9 pages, 1993011 bytes).
 PDF statistics:
  322 PDF objects out of 1000 (max. 8388607)
  285 compressed objects within 3 object streams

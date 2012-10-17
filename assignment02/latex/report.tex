@@ -243,3 +243,13 @@ We can conclude $x_N = (1+ \sum\limits_{j=1}^{l-1}\prod\limits_{k=1}^{j} \gamma_
 
 \subsection{b}
 
+\begin{align*}
+x_i &= \frac{1+\sum\limits_{j=1}^{i-1}\prod\limits_{k=1}^{j} \gamma_K}{1+\sum\limits_{j=1}^{N-1}\prod\limits_{k=1}^{j} \gamma_K}\\
+\gamma_i &= \frac{P_{i, i-1}}{P_{i,i+1}} = \frac{1}{r}
+\end{align*}
+
+\begin{align*} x_i = \frac{1+\frac{1}{r} + \frac{1}{r^2} +\frac{1}{r^3} + \dots + \frac{1}{r^{i-1}}}{1+\frac{1}{r} + \frac{1}{r^2} +\frac{1}{r^3} + \dots + \frac{1}{r^{N-1}}} = \frac{1-\frac{1}{r^i}}{1-\frac{1}{r^N}} &\rightarrow \boxed{ x_i = \frac{1-\frac{1}{r^i}}{1-\frac{1}{r^N}} }\\
+&\rightarrow \boxed{ x_1 = \frac{1-\frac{1}{r}}{1-\frac{1}{r}} }
+\end{align*}
+
+\[ \lim\limits_{r\rightarrow1}  \frac{f(r)}{g(r)} = \lim\limits_{r\rightarrow1}  \frac{f'(r)}{g'(r)} =  \lim\limits_{r\rightarrow1}  \frac{\frac{1}{r^2}}{\frac{Nr^{N-1}}{r^{2N}}} = \frac{1}{N} \rightarrow \boxed{\lim\limits_{r\rightarrow1} \frac{1-\frac{1}{r}}{1-\frac{1}{r^N}} = \frac{1}{N} }   \]
