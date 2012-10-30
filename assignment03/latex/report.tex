@@ -53,7 +53,7 @@ text depth=0.25ex]{
 \end{tikzpicture}
 \end{center}
 
-\[ \text{Prob(P)} = \prod\limits_{i=1}^{3} \frac{\lambda_{Ji}}{\sum\limits_{J \in \text{Exit}_i} \lambda_J } = \frac{\lambda_2}{\sum\limits_{J \in \text{Exit}_i = 1,2,3} \lambda_J} \times \frac{\lambda_3}{\sum\limits_{J \in \text{Exit}_i = 1,3} \lambda_J}  \times \frac{\lambda_1}{\sum\limits_{J \in \text{Exit}_i = 1} \lambda_J} = \frac{\lambda_2\lambda_3}{(\lambda_1+\lambda_2+\lambda_3)\times(\lambda_3+\lambda_1)}\]
+\[ \text{Prob(P)} = \prod\limits_{i=1}^{3} \frac{\lambda_{Ji}}{\sum\limits_{J \in \text{Exit}_i} \lambda_J } = \frac{\lambda_2}{\sum\limits_{J \in \text{Exit}_i = 1,2,3} \lambda_J} \times \frac{\lambda_3}{\sum\limits_{J \in \text{Exit}_i = 1,3} \lambda_J}  \times \frac{\lambda_1}{\sum\limits_{J \in \text{Exit}_i = 1} \lambda_J} =\boxed{ \frac{\lambda_2\lambda_3}{(\lambda_1+\lambda_2+\lambda_3)\times(\lambda_3+\lambda_1)}}\]
 
 \subsection{b}
 
@@ -61,6 +61,14 @@ All possible genotypes starting from the wt (no mutation occurred) are 8: $\{0\}
 Then, the expected waiting time is (where $k$ is the number of mutations expected and $p$ the number of pathways):
 
 \[E[T_k] = \sum\limits_{p=1}^{6} \sum\limits_{n=1}^{k=2} \frac{1}{\sum\limits_{J \in \text{Exit}_i} \lambda_J} \times \text{Prob}(P) = \sum\limits_{p=1}^{6} \sum\limits_{n=1}^{k=2} \frac{1}{\sum\limits_{J \in \text{Exit}_i} \lambda_J} \times \prod\limits_{i=1}^{3} \frac{\lambda_{Ji}}{\sum\limits_{J \in \text{Exit}_i} \lambda_J } \]
+
+\begin{align*}
+E[T_{p_{1-6}}] &= (\frac{1}{\lambda_1+\lambda_2+\lambda_3} + \frac{1}{\lambda_2+\lambda_3}) \times (\frac{\lambda_1}{\lambda_1+\lambda_2+\lambda_3}) + \\ & +(\frac{1}{\lambda_1+\lambda_2+\lambda_3} + \frac{1}{\lambda_1+\lambda_3}) \times (\frac{\lambda_2}{\lambda_1+\lambda_2+\lambda_3}) + \\ & + (\frac{1}{\lambda_1+\lambda_2+\lambda_3} + \frac{1}{\lambda_1+\lambda_2}) \times (\frac{\lambda_3}{\lambda_1+\lambda_2+\lambda_3}) 
+\end{align*}
+
+\subsection{c}
+
+Considering $d$ independent mutation, there are exactly $d\times(d-1)\times(d-2)\times\dots\times1 = d!$ pathways to the genotype where all the mutations are present at the same time. If cancer arises after $k$ mutation, there are $d\times(d-1)\times(d-2)\times\dots\times(d-k+1) = \frac{d!}{(d-k)!}$ paths.
 
 \setcounter{chapter}{5}
 \setcounter{section}{0}
