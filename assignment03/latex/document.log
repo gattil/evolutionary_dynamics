@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 14:21
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 14:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1739,7 +1739,7 @@ Package pdfcprot Info: File pplmnOT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
 (pdfcprot)             you intended to use. on input line 47.
 ABD: EveryShipout initializing macros
-<ETHlogo.pdf, id=59, 179.67125pt x 45.16875pt>
+<ETHlogo.pdf, id=63, 179.67125pt x 45.16875pt>
 File: ETHlogo.pdf Graphic file (type pdf)
  <use ETHlogo.pdf>
 Package pdftex.def Info: ETHlogo.pdf used on input line 53.
@@ -1840,7 +1840,7 @@ Overfull \hbox (9.22pt too wide) in paragraph at lines 153--154
 [][] 
  []
 
-[4]) [5]
+[4] [5]) [6]
 \tf@thm=\write6
 \openout6 = `document.thm'.
 
@@ -1850,14 +1850,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 6113C467BEB1E38848AB663AD356E55B;763.
+(rerunfilecheck)             Checksum: 97F53756492941225083C47EB7274746;818.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24112 strings out of 493633
- 399648 string characters out of 3143377
+ 24116 strings out of 493633
+ 399699 string characters out of 3143377
  569780 words of memory out of 3000000
- 26879 multiletter control sequences out of 15000+200000
+ 26881 multiletter control sequences out of 15000+200000
  40079 words of font info for 122 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  64i,14n,71p,914b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1875,10 +1875,10 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (5 pages, 162670 bytes).
+Output written on document.pdf (6 pages, 165032 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 12414 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 12422 words of extra memory for PDF output out of 14400 (max. 10000000)
 

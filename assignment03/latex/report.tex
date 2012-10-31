@@ -192,6 +192,16 @@ Replacing $x_j(t) = \frac{e^{j-<j>}}{N} : $
 
 \subsection{c}
 
+For $u=10^{-7}$, $d=100$, $s=0.01$ per mutation, $(j-<j>) \approx \sqrt{\log N}$, $N=10^{7}$ cells, generation time $t=1$ day.
+From point b: $\boxed{T = \frac{\ln(1+\frac{s(j-<j>))}{ud})}{s(j-<j>)}}$.
+
+\begin{align*}
+T &= \frac{\ln(1+\frac{s(j-<j>))}{ud})}{s(j-<j>)} =& \frac{\ln (1+\frac{s\sqrt{\ln H}}{nd})}{s\sqrt{\ln N}} \\
+T &= \frac{\ln (1+\frac{0.01\sqrt{\ln 10^7}}{10^{-7}\times 100})}{0.01\sqrt{\ln 10^7}} =& \frac{\ln (2646.75)}{0.0265} \\
+T &= 207 \text{days}&
+\end{align*}
+
+
 
 
 
