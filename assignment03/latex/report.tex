@@ -162,3 +162,36 @@ Considering $d$ independent mutation, there are exactly $d\times(d-1)\times(d-2)
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Wave approximation}
+\[ x'_j = sx_j (j-<j>)  \]
+\[ s<j> = s\sum\limits_{j}jx_j = \text{constant} \]
+
+\subsection{a}
+
+\begin{align*}
+ x'_j = sx_j(j-<j>)	\Rightarrow & \frac{dx_j(t)}{x_j(t)} = s(j-<j>)dt\\
+& \int\limits_{x(0)}^{x(t)} \frac{dx_j(t)}{x_j(t)} = \int\limits_{0}^{t} s(j-<j>)dt\\
+& \ln x_j(t) - \ln x_j(0) = st(j-<j>) -s0(j-<j>) = st(j-<j>)\\
+& e^{\ln x_j(t)- \ln x_j(0)} = e^{st(j-<j>)}\\
+& \frac{x_j(t)}{x_j(0)} = e^{st(j-<j>)}
+\end{align*}
+
+As $x_j(0) = \frac{1}{N} \Rightarrow \boxed{x_j(t) = \frac{e^{st(j-<j>)}}{N}} $
+
+\subsection{b}
+
+$r = udx_j(t)$, let $T$ be the time it takes to produce a new mutant $x_{j+1}(T) = \frac{1}{N} = ud\int\limits_{0}^{T} x_j(t)dt$.\\
+Replacing $x_j(t) = \frac{e^{j-<j>}}{N} : $
+\begin{align*}
+\frac{1}{N} = ud\int\limits_{0}^{T} \frac{1}{N}e^{(j-<j>)}dt &= \frac{ud}{N}\int\limits_{0}^{T} e^{st(j-<j>)}dt\\
+1 = ud\left(\frac{e^{sT(j-<j>)}}{s(j-<j>)}-\frac{e^{s0(j-<j>)}}{s(j-<j>}\right) &= ud\left( \frac{e^{sT(j-<j>)}}{s(j-<j>)} - \frac{1}{s(j-<j>)}\right)\\
+ \frac{1}{ud}+\frac{1}{s(j-<j>)} &= \frac{e^{sT(j-<j>)}}{s(j-<j>)}\\
+ \frac{s(j-<j>)}{ud}+1 &= e^{sT(s(j-<j>))}\\
+ \ln (\frac{s(j-<j>)}{ud}+1) &= sTs(j-<j>\\
+ \Aboxed{T &= \frac{\ln(1+\frac{s(j-<j>))}{ud})}{s(j-<j>)}}
+\end{align*}
+
+\subsection{c}
+
+
+
+
