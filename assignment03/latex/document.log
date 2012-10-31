@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 14:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 15:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1875,7 +1875,7 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (6 pages, 165032 bytes).
+Output written on document.pdf (6 pages, 164980 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams
