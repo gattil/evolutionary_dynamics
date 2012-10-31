@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 15:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 15:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1840,7 +1840,12 @@ Overfull \hbox (9.22pt too wide) in paragraph at lines 153--154
 [][] 
  []
 
-[4] [5]) [6]
+[4] [5]
+Overfull \hbox (588.90546pt too wide) detected at line 207
+[] \OT1/zplm/m/n/10 = [] = []
+ []
+
+) [6]
 \tf@thm=\write6
 \openout6 = `document.thm'.
 
@@ -1854,13 +1859,13 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24116 strings out of 493633
- 399699 string characters out of 3143377
+ 24117 strings out of 493633
+ 399711 string characters out of 3143377
  569780 words of memory out of 3000000
  26881 multiletter control sequences out of 15000+200000
  40079 words of font info for 122 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 64i,14n,71p,914b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,14n,71p,1060b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1875,10 +1880,10 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (6 pages, 164980 bytes).
+Output written on document.pdf (6 pages, 166005 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  12422 words of extra memory for PDF output out of 14400 (max. 10000000)
 
