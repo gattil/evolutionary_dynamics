@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 15:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 20:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1819,14 +1819,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-[3]
-Overfull \hbox (9.81433pt too wide) detected at line 134
+<./img/ex3.pdf, id=84, page=1, 597.23125pt x 751.83148pt>
+File: ./img/ex3.pdf Graphic file (type pdf)
+
+<use ./img/ex3.pdf, page 1>
+Package pdftex.def Info: ./img/ex3.pdf, page1 used on input line 101.
+(pdftex.def)             Requested size: 477.78564pt x 601.466pt.
+
+Overfull \hbox (44.78564pt too wide) in paragraph at lines 101--102
+ [][] 
+ []
+
+<./img/ex3.pdf, id=85, page=2, 596.95973pt x 731.97115pt>
+File: ./img/ex3.pdf Graphic file (type pdf)
+
+<use ./img/ex3.pdf, page 2>
+Package pdftex.def Info: ./img/ex3.pdf, page2 used on input line 105.
+(pdftex.def)             Requested size: 477.56842pt x 585.57771pt.
+
+Overfull \hbox (44.56842pt too wide) in paragraph at lines 105--106
+ [][] 
+ []
+
+[3] [4 <./img/ex3.pdf>] [5 <./img/ex3.pdf>]
+Overfull \hbox (9.81433pt too wide) detected at line 141
 [] \OT1/zplm/m/n/10 = [] [] = [] \OMS/zplm/m/n/10 ^^B [] ^^B [] \OT1/zplm/m/n/1
 0 = []
  []
 
 
-Overfull \hbox (27.8654pt too wide) in paragraph at lines 138--140
+Overfull \hbox (27.8654pt too wide) in paragraph at lines 145--147
 \OT1/pplx/m/n/10 All pos-si-ble geno-types start-ing from the wt (no mu-ta-tion
  oc-curred) are 8: $\OMS/zplm/m/n/10 f\OT1/pplx/m/n/10 0\OMS/zplm/m/n/10 g\OT1/
 pplx/m/n/10 ; \OMS/zplm/m/n/10 f\OT1/pplx/m/n/10 1, 2, 3\OMS/zplm/m/n/10 g\OT1/
@@ -1836,16 +1858,39 @@ pplx/m/n/10 .
  []
 
 
-Overfull \hbox (9.22pt too wide) in paragraph at lines 153--154
+Overfull \hbox (9.22pt too wide) in paragraph at lines 160--161
 [][] 
  []
 
-[4] [5]
-Overfull \hbox (588.90546pt too wide) detected at line 207
-[] \OT1/zplm/m/n/10 = [] = []
+<./img/ex5.pdf, id=112, page=1, 597.23125pt x 833.1125pt>
+File: ./img/ex5.pdf Graphic file (type pdf)
+
+<use ./img/ex5.pdf, page 1>
+Package pdftex.def Info: ./img/ex5.pdf, page1 used on input line 170.
+(pdftex.def)             Requested size: 477.78564pt x 666.49092pt.
+
+Overfull \hbox (44.78564pt too wide) in paragraph at lines 170--171
+ [][] 
  []
 
-) [6]
+
+LaTeX Warning: Float too large for page by 44.49092pt on input line 171.
+
+<./img/ex5.pdf, id=113, page=2, 597.23125pt x 833.1125pt>
+File: ./img/ex5.pdf Graphic file (type pdf)
+
+<use ./img/ex5.pdf, page 2>
+Package pdftex.def Info: ./img/ex5.pdf, page2 used on input line 174.
+(pdftex.def)             Requested size: 477.78564pt x 666.49092pt.
+
+Overfull \hbox (44.78564pt too wide) in paragraph at lines 174--175
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 44.49092pt on input line 175.
+
+[6] [7 <./img/ex5.pdf>] [8 <./img/ex5.pdf>] [9]) [10]
 \tf@thm=\write6
 \openout6 = `document.thm'.
 
@@ -1855,17 +1900,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 97F53756492941225083C47EB7274746;818.
+(rerunfilecheck)             Checksum: A1F2DB8176D83C6568AE10B3F9171119;818.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24117 strings out of 493633
- 399711 string characters out of 3143377
- 569780 words of memory out of 3000000
- 26881 multiletter control sequences out of 15000+200000
+ 24142 strings out of 493633
+ 400106 string characters out of 3143377
+ 567780 words of memory out of 3000000
+ 26900 multiletter control sequences out of 15000+200000
  40079 words of font info for 122 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 64i,14n,71p,1060b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,14n,71p,914b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1880,10 +1925,10 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/f
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (6 pages, 166005 bytes).
+Output written on document.pdf (10 pages, 838388 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 12422 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 12442 words of extra memory for PDF output out of 14400 (max. 10000000)
 
