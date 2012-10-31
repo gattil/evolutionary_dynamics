@@ -66,6 +66,34 @@ Computing the real values of c:
 \setcounter{section}{0}
 \section{Linear process of colonic crypt transformation}
 
+\textbf{1. Homogenous tissue} (well-mixed compartment).\\
+First, we will find a prob of a single mutant with fitness $r=1.05$ to take over the compartment of size $N=1000$ (Moran Process)
+
+\[ p = \frac{1-\frac{1}{r}}{1 - \frac{1}{r^N}} = \frac{1-\frac{1}{1.05}}{1-\frac{1}{1.05^{1000}}} = 0.0476  \]
+
+Then, we find the prob of a compartment has been taken by mutated cell after 50 years (25550 days) is 
+
+\[ p=1-e^{-Nupt}=1-e^{-1000\times10^{-8}\times0.0476\times18250}=0.0086528 \]
+
+Now, we have $M=10^7$ crypts so we could expect $M \times 0.0086528 =$  \textbf{86528 neoplastic crypts}
+
+\textbf{2. Single Stem cell} (linear process). \\
+
+Since the stem cell is the only one which is mater in linear crypt, we could calculate the probability of compartment being taken by mutation of a stem cell in 50 years as follows $t = 50\times\frac{365}{10}=1825 $:
+
+\[ p=1-e^{-ut}=1-e^{-10^{-8}\times1825}=1.825\times10^{-5} \]
+
+so, we expect $10^7 \times p =$  \textbf{182.5 neoplastic crypts}
+
+\textbf{3.	Multiple stem cells} (5 cells)\\
+
+ This is actually the same case as well-mixed compartment but with effective population size of 5, because any of stem cell can mutate and originate a cancer, so 
+
+\[ p = \frac{1-\frac{1}{r}}{1 - \frac{1}{r^N}} = \frac{1-\frac{1}{1.05}}{1-\frac{1}{1.05^{5}}} = 0.22  \]
+\[ p=1-e^{-Nupt}=1-e^{-5\times10^{-8}\times0.22\times18250}=2.0075\times10^{-5} \]
+
+so, we expect $10^7 \times p = $ \textbf{200.74 neoplastic crypts}
+
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \section{Multistage theory}

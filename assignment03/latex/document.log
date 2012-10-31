@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 08:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  31 OCT 2012 09:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1810,13 +1810,23 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
 go.pdf>] [2]
-Overfull \hbox (9.81433pt too wide) detected at line 106
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+[3]
+Overfull \hbox (9.81433pt too wide) detected at line 134
 [] \OT1/zplm/m/n/10 = [] [] = [] \OMS/zplm/m/n/10 ^^B [] ^^B [] \OT1/zplm/m/n/1
 0 = []
  []
 
 
-Overfull \hbox (27.8654pt too wide) in paragraph at lines 110--112
+Overfull \hbox (27.8654pt too wide) in paragraph at lines 138--140
 \OT1/pplx/m/n/10 All pos-si-ble geno-types start-ing from the wt (no mu-ta-tion
  oc-curred) are 8: $\OMS/zplm/m/n/10 f\OT1/pplx/m/n/10 0\OMS/zplm/m/n/10 g\OT1/
 pplx/m/n/10 ; \OMS/zplm/m/n/10 f\OT1/pplx/m/n/10 1, 2, 3\OMS/zplm/m/n/10 g\OT1/
@@ -1826,11 +1836,11 @@ pplx/m/n/10 .
  []
 
 
-Overfull \hbox (9.22pt too wide) in paragraph at lines 125--126
+Overfull \hbox (9.22pt too wide) in paragraph at lines 153--154
 [][] 
  []
 
-) [3] [4]
+) [4]
 \tf@thm=\write6
 \openout6 = `document.thm'.
 
@@ -1844,11 +1854,11 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 24096 strings out of 493633
- 399453 string characters out of 3143377
- 568780 words of memory out of 3000000
- 26868 multiletter control sequences out of 15000+200000
- 39241 words of font info for 120 fonts, out of 3000000 for 9000
+ 24103 strings out of 493633
+ 399523 string characters out of 3143377
+ 566780 words of memory out of 3000000
+ 26873 multiletter control sequences out of 15000+200000
+ 40079 words of font info for 122 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  64i,14n,71p,914b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1861,12 +1871,13 @@ e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/
 /2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
 2011/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2011/
 texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texm
-f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (4 pages, 133565 bytes).
+f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/t
+ype1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (4 pages, 150715 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 130 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  16 named destinations out of 1000 (max. 500000)
  12398 words of extra memory for PDF output out of 14400 (max. 10000000)
 
