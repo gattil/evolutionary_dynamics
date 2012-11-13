@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  8 NOV 2012 10:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  13 NOV 2012 23:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1793,6 +1793,18 @@ File: uesvect.fd
 ) (./report.tex
 LaTeX Font Info:    Font shape `OT1/pplx/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pplx/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 6.
 ) [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
@@ -1810,23 +1822,27 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 23868 strings out of 493633
- 395574 string characters out of 3143377
- 550782 words of memory out of 3000000
- 26672 multiletter control sequences out of 15000+200000
- 24038 words of font info for 73 fonts, out of 3000000 for 9000
+ 23919 strings out of 493633
+ 396137 string characters out of 3143377
+ 554782 words of memory out of 3000000
+ 26707 multiletter control sequences out of 15000+200000
+ 36621 words of font info for 112 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  64i,11n,55p,914b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/tex
-live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texli
-ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on document.pdf (1 page, 68920 bytes).
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texli
+ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive
+/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
+2011/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (1 page, 112954 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
  12358 words of extra memory for PDF output out of 14400 (max. 10000000)
 
