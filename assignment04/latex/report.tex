@@ -81,6 +81,89 @@ Then:
 \setcounter{section}{0}
 \section{Treatment of chronic myeloid leukemia}
 
+\begin{align*}
+x'_0 &= [\lambda x_0 - d_0]x_0 \rightarrow \text{quiescent stem cells}\\
+x'_1 &= a_1x_0 - d_1x_1 \rightarrow \text{actively proliferating stem cells}\\
+x'_2 &= a_1x_1 - d_2x_2 \rightarrow \text{early differentiated cells}\\
+x'_3 &= a_3x_2 - d_3x_3 \rightarrow \text{fully differentiated blood cells}
+\end{align*}
+\[ 0 < d_1 \ll d_2 \ll d_3 \text{~~~~~~~~~~} \frac{a_i}{d_i} > 1  \text{~~~~~~~~~~} \forall i \]
+
+at steady state, all $(\vec{x'_i}) = \vec{0}$. In the trivial case: $x^*_0 = 0 \leftrightarrow x^*_1 = 0 \leftrightarrow x^*_2 = 0 \leftrightarrow x^*_3 = 0$
+Other case from:
+
+\begin{align*}
+x^*_0 &= \frac{d_0}{\lambda}\\
+x^*_1 &= \frac{a_1}{d_1}\frac{d_0}{\lambda}\\
+x^*_2 &= \frac{a_2}{d_2}\frac{a_1}{d_1}\frac{d_0}{\lambda}\\
+x^*_3 &= \frac{a_3}{d_3}\frac{a_2}{d_2}\frac{a_1}{d_1}\frac{d_0}{\lambda}\\
+\end{align*}
+
+Thus, the most abundandt cell type at steady state is $x_3$ since $\frac{a_i}{d_i} > 1 \text{~~~} \forall i $
+
+Proof exemplarily for: \[x^*_3 > x^*_2 : \frac{a_3}{d_3}  \underbrace{\frac{a_2}{d_2}\frac{a_1}{d_1}\frac{d_0}{\lambda}}_\text{cancels out to 1} >  \underbrace{\frac{a_2}{d_2}\frac{a_1}{d_1}\frac{d_0}{\lambda}}_\text{cancels out to 1}\]
+
+So, \[\frac{a_3}{d_3}>1\]
+
+\subsection{b}
+
+From the non trivial steady state above, if $x_1 = x^*_1$, then all other $x_i$ are also in the
+steady state $x^*_i$ at $t = 0$. Since imatinib treatment does not change $x'_0$, and $x_0$ is in the steady state at  $t = 0 : x'_0 = 0 \leftrightarrows x_0 = \frac{d_0}{\lambda}$ , it can be seen as constant. That leads to:
+
+\[ x'_1 = a'_1x_0 - d_1x_1 = a'_1\frac{d_0}{\lambda} -d_1x_1  \]
+
+The solution for this is: 
+
+\begin{align*}
+\frac{dx_1}{dt} &= -d_1x_1 \text{general solution}\\
+\frac{dx_1}{x_1} &= -d_1dt \\
+\log x_1 &= d_1t+C \\
+x_1(t) &= e^{-d_1t}\times C
+\end{align*}
+
+In steady state conditions, when $x_1(0) = \frac{a_1d_0}{d_1\lambda}$, it is:
+
+\[ x_1(0) = e^{-d_1(0)} \cdot C = \frac{a_1 \cdot d_0}{ d_1 \cdot \lambda}\]
+\[ C = \frac{a_1d_0}{d_1\lambda} \]
+
+To retrieve solutions in nonhomogeneous differential equations, we have to take in account for partial solutions:
+
+\[ y'(x) + a(x)y(x) = s(x) \]
+
+
+\[
+ y(p) = \begin{dcases}
+		\frac{s}{a}  & a \neq 0,  a \wedge s = constant\\
+		\int s(x) e^{\int a(x)dx} & a(x) \wedge s(x) \neq constant
+        \end{dcases}
+\]
+
+Hence,
+
+\[ \rightarrow \frac{s}{a} = \frac{a'_1d_0}{\lambda d_1} \]
+\[ \rightarrow x_1(t) = e^{d_1t}\frac{a_1d_0}{\lambda d_1} + \frac{a'_1d_0}{\lambda d_1} \]
+
+This scales with $\frac{1}{d_1}$ (average life time of $x_1$-cells), since almost no $x_1$ cells differentiate from $x_0$ ($a'_1 \ll a_1$) and the death rate $d_1$ is constant:
+
+\[ x_1(t) = \frac{1}{d_1} \left(e^{d_1t}\frac{a_1d_0}{\lambda}\frac{a'_1d_0}{\lambda}\right)\]
+
+\subsection{c}
+
+The bi-phasic decline of the number of leukemic blood cells $x3$ can be explained in the
+following way: the first slope describes the exponentially decline of the early differentiated leukemic
+cells until they reach the new steady state $x^*_2 = \frac{a'_2}{d_2} \cdot x^*_1$ with the leukemic progenitors. Now, the decline of leukemic blood cells follows the decline of leukemic progenitors. 
+
+Thus, the death rates $d1$ and $d2$ can be directly determined from the graph:
+\begin{itemize}
+\item $d1 = 0.004$  death rate of leukemic progenitors during imatinib therapy
+\item $d2 = 0.03$  death rate of leukemic early differentiated cells during imatinib therapy
+\end{itemize}
+
+\subsection{d}
+
+If the treatment with imatinib is stopped or the cells become resistant to imatinib after a certain time, the leukemic cells will exponentially appear again. Since imatinib does not affect the leukemic stem cells, $x_0$ but only the (in leukemia uncontrolled) differentiating blood cells $x_1$ and $x_2$ (and thus the number of leukemic blood cells $x_3$), a new population of leukemic cells will arise from the stem cell pool with exponential growth until the number of leukemic cells reaches the level of before treatment (or even above this level if the number of leukemic stem cells is not constant but increasing due to a higher proliferation rate).
+Same is true if the number of quiescent stem cells has not yet reached steady state at the onset of treatment: the leukemic blood cells will exceed the level from before by far, because, unchanged by the imatinib treatment, the quiescent stem cells will reach steady state and give exponentially rise to leukemic blood cells after the interruption of the treatment.
+
 \setcounter{chapter}{4}
 \setcounter{section}{0}
 \section{One-dimensional Fokker-Planck equation}

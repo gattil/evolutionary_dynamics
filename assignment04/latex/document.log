@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  14 NOV 2012 00:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.10.7)  14 NOV 2012 09:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1739,7 +1739,7 @@ Package pdfcprot Info: File pplmnOT1.cpa{} used for the adjustment
 (pdfcprot)             of the char protruding. It seems that it isn't the one
 (pdfcprot)             you intended to use. on input line 47.
 ABD: EveryShipout initializing macros
-<ETHlogo.pdf, id=39, 179.67125pt x 45.16875pt>
+<ETHlogo.pdf, id=51, 179.67125pt x 45.16875pt>
 File: ETHlogo.pdf Graphic file (type pdf)
  <use ETHlogo.pdf>
 Package pdftex.def Info: ETHlogo.pdf used on input line 53.
@@ -1809,7 +1809,17 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ETHlo
-go.pdf>]) [2] [3]
+go.pdf>] [2] [3]
+LaTeX Font Info:    Try loading font information for OMS+pplx on input line 158
+.
+LaTeX Font Info:    No file OMSpplx.fd. on input line 158.
+
+
+LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 158.
+
+[4]) [5]
 \tf@thm=\write6
 \openout6 = `document.thm'.
 
@@ -1819,34 +1829,40 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: ACEBDEAD4B707F4CAE60EEF1A24D3AD6;549.
+(rerunfilecheck)             Checksum: 35F958FE4B99FA327E70FF7E6FA6E402;713.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 69.
  ) 
 Here is how much of TeX's memory you used:
- 23944 strings out of 493633
- 396381 string characters out of 3143377
- 560780 words of memory out of 3000000
- 26719 multiletter control sequences out of 15000+200000
- 39409 words of font info for 121 fonts, out of 3000000 for 9000
+ 23981 strings out of 493633
+ 396806 string characters out of 3143377
+ 563782 words of memory out of 3000000
+ 26745 multiletter control sequences out of 15000+200000
+ 40322 words of font info for 125 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 64i,12n,55p,914b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,12n,55p,914b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
-ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texliv
-e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/
-2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
-011/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2011/t
-exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
-Output written on document.pdf (3 pages, 138587 bytes).
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texliv
+e/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive
+/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/
+2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+11/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2011/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2011/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on document.pdf (5 pages, 165605 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 12374 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 143 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 17 named destinations out of 1000 (max. 500000)
+ 12398 words of extra memory for PDF output out of 14400 (max. 10000000)
 
