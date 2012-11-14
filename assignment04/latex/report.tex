@@ -115,7 +115,7 @@ steady state $x^*_i$ at $t = 0$. Since imatinib treatment does not change $x'_0$
 The solution for this is: 
 
 \begin{align*}
-\frac{dx_1}{dt} &= -d_1x_1 \text{general solution}\\
+\frac{dx_1}{dt} &= -d_1x_1 \text{~~~general solution}\\
 \frac{dx_1}{x_1} &= -d_1dt \\
 \log x_1 &= d_1t+C \\
 x_1(t) &= e^{-d_1t}\times C
@@ -175,3 +175,51 @@ Same is true if the number of quiescent stem cells has not yet reached steady st
 \setcounter{chapter}{6}
 \setcounter{section}{0}
 \section{Absorption time in the diffusion approximation}
+The conditional expected waiting time for fixation, $\tau_1(p_0)$, in the neutral Wright-Fisher process can be computed as follows. Since we have a neutral process, there is not fitness advantage: $\omega_1 = \omega_2 = 1, M(p)=0, V(p) = p(1-p)$ and $\rho(p) = p$ (due to the appropriate scale of time measurement, as below).
+Therefore,
+
+\begin{align*}
+A(p) &= \int\limits_{0}^{p} \frac{2M(p)}{V(p)} dp = \int\limits_{0}^{p} 0dp = 0 \\
+S(p) &= \int\limits_{0}^{p} e^{-A(p)}dp = \int\limits_{0}^{p} 1dp = p
+\end{align*}
+
+Simplifying the equation:
+
+\begin{align*}
+\tau_1 &= 2(1-0) \left( \int\limits_{p_0}^{1} \frac{p(1-p)}{1(p(1-p))}dp +\frac{a-p_0}{p_0} \int\limits_{0}^{p_0} \frac{p^2}{1p(1-p)} \right)\\
+&= 2 \left( \int\limits_{p_0}^{1}  1dp + \frac{1-p_0}{p_0} \int\limits_{0}^{p_0} \frac{p}{1-p}\right) \\
+&= 2(1-p_0 + \frac{1-p_0}{p_0}-p_0-\log(1-p_0)))\\
+&= 2(\frac{p_0(1-p_0)-p_0+p^2_0 - (\log(1-p_0) -p_0 \log(1-p_0)}{p_0})\\
+&= 2(\frac{log(1-p_0)(p_0-1)}{p_0}) = -2\frac{1-p_0}{p_0} \log(1-p_0)
+\end{align*}
+
+The appropriate scale for the W-F process measured time in units of N generation [as in S.P. Otto and T. Day, \textit{A biologist's guide to mathematical modelling in molecular evolution}, Number Bd. 13 in A biologist’s guide to mathematical modeling in ecology and evolution. Princeton University Press, 2007, p.681], and we have to multiply this equation with $N$ in order to get the fixation time in generations.
+
+\[ \tau_1(p_0) = -2N\frac{1-p_0}{p_0}\log(1-p_0) \]
+
+In case of small $p_0$:
+
+\begin{align*}
+\lim\limits_{p_0 \rightarrow 0} -2N \frac{1-p_0}{p_0} \log(1-p_0) &= \lim\limits_{p_0 \rightarrow 0} -2N \frac{\log(1-p_0)}{p_0}+\underbrace{\frac{p_0\log(1-p_0)}{p_0}}_\text{$0$}\\
+&= \lim\limits_{p_0 \rightarrow 0} -2N\frac{\log(1-p_0)}{p_0} = \frac{0}{0} \\
+& \textbf{Use l'Hopital rule to solve undertermined forms}\\
+&= \lim\limits_{p_0 \rightarrow 0} -2N\frac{\frac{-1}{1-p_0}}{1} \\
+&= \lim\limits_{p_0 \rightarrow 0} \frac{2N}{1-\underbrace{p_0}_\text{$0$}}\\
+&= 2N
+\end{align*}
+Hence, for small $p_0$, the conditional expected waiting time for fixation is $\tau_1(p_0) = 2N$, two times the generation size.
+
+\subsection{c}
+
+The conditional expected waiting time until extinction $\tau_0$ of type A is the same as the conditional expected waiting time for fixation of type B starting with $p_0$ in the same population (with two types).
+
+\[\tau_0  = \tau_1\]
+
+The unconditioned expected waiting time $\bar{\tau}$ until either fixation or extinction is the sum of the conditioned waiting times multiplied with their conditions probabilities
+\begin{align*}
+\bar{\tau} &= \tau_1 \cdot \rho + \tau_0 \cdot (1-\rho)\\
+&= \tau_1 \cdot \rho + \tau_1 \cdot (1-\rho)\\
+\bar{\tau} &= \tau_1
+\end{align*}
+
+Hence, the uncondition expected waiting time until either fixation or extinction equals the conditioned expected waiting times, because in populations with two types and a neutral Wright-Fisher process with two absorbing states at the boundaries, the fixation of one type corresponds to the extinction of the other type.
